@@ -8,7 +8,7 @@ Identify opportunities across portfolio companies, business units and related st
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | S | · | · | R | · |
+| **Short term** | S | · | · | R | · |
 | **Mid-term** | S | R | · | · | S |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

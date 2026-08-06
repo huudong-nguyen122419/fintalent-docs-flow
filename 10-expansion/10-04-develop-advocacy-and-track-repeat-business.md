@@ -8,7 +8,7 @@ Coordinate referrals and testimonials and maintain visibility on repeat projects
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | S | · | · | R | · |
+| **Short term** | S | · | · | R | · |
 | **Mid-term** | S | R | · | · | S |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

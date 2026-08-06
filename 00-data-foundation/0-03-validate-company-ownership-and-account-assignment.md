@@ -8,7 +8,7 @@ Ensure each account has a clear owner and the correct team, portfolio and relati
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | R | · | · | S | · |
+| **Short term** | R | · | · | S | · |
 | **Mid-term** | S | S | · | R | S |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

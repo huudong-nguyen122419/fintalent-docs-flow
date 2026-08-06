@@ -8,7 +8,7 @@ Understand why the project exists, why it matters now and what outcome the clien
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | · | · | · | R | · |
+| **Short term** | · | · | · | R | · |
 | **Mid-term** | · | R | · | · | S |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

@@ -8,7 +8,7 @@ Use defined check-ins and ongoing client contact to review delivery progress, sa
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | · | · | · | R | · |
+| **Short term** | · | · | · | R | · |
 | **Mid-term** | · | R | · | · | S |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

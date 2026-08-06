@@ -2,7 +2,7 @@
 
 10 activities. None of them is broken down into a flow yet — each page below carries what the matrix says and nothing more.
 
-| ID | Activity | Owner today | Owner mid-term |
+| ID | Activity | Owner short term | Owner mid-term |
 |---|---|---|---|
 | 8.01 | [Prepare commercial summary and confirm final terms](8-01-prepare-commercial-summary-and-confirm-final-terms.md) | Senior Ops | KAM |
 | 8.02 | [Collect and validate client onboarding data](8-02-collect-and-validate-client-onboarding-data.md) | Junior Ops | Junior Ops |

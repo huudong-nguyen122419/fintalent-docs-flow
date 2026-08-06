@@ -8,7 +8,7 @@ Track invitations, responses and application volume against the project requirem
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | · | · | R | · | · |
+| **Short term** | · | · | R | · | · |
 | **Mid-term** | · | · | S | · | R |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

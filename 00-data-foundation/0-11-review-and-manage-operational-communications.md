@@ -8,7 +8,7 @@ Review, categorize and respond to client, talent, applicant and support messages
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | · | · | R | S | · |
+| **Short term** | · | · | R | S | · |
 | **Mid-term** | · | · | R | S | · |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

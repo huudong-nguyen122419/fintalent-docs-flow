@@ -8,7 +8,7 @@ Remove duplicates and correct incomplete, inconsistent or outdated company data.
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | R | · | · | · | · |
+| **Short term** | R | · | · | · | · |
 | **Mid-term** | S | · | · | · | R |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

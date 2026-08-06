@@ -8,7 +8,7 @@ Review scope, taxonomy, screening, pricing, sourcing logic and client assumption
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | · | · | S | R | · |
+| **Short term** | · | · | S | R | · |
 | **Mid-term** | · | S | S | R | S |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

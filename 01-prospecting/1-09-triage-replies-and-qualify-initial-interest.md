@@ -8,7 +8,7 @@ Categorize replies, respond appropriately and determine whether a commercial con
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | R | · | · | S | · |
+| **Short term** | R | · | · | S | · |
 | **Mid-term** | R | · | · | · | S |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

@@ -8,7 +8,7 @@ Maintain proactive, professional communication and keep both sides aligned throu
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | · | · | S | R | · |
+| **Short term** | · | · | S | R | · |
 | **Mid-term** | · | R | S | · | S |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

@@ -2,7 +2,7 @@
 
 6 activities. None of them is broken down into a flow yet — each page below carries what the matrix says and nothing more.
 
-| ID | Activity | Owner today | Owner mid-term |
+| ID | Activity | Owner short term | Owner mid-term |
 |---|---|---|---|
 | 4.01 | [Create project record and draft client-facing brief](4-01-create-project-record-and-draft-client-facing-brief.md) | Senior Ops | KAM |
 | 4.02 | [Define project requirements and matching parameters](4-02-define-project-requirements-and-matching-parameters.md) | Senior Ops | KAM |

@@ -8,7 +8,7 @@ Confirm that interested talents broadly match the project and that availability,
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | · | · | R | S | · |
+| **Short term** | · | · | R | S | · |
 | **Mid-term** | · | · | R | · | S |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

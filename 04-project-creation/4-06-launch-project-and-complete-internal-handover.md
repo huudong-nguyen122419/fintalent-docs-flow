@@ -8,7 +8,7 @@ Set the project live and ensure Operations has the context required to execute s
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | · | · | R | S | · |
+| **Short term** | · | · | R | S | · |
 | **Mid-term** | · | S | R | S | S |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

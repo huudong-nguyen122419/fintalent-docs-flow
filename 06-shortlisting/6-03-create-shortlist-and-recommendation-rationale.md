@@ -8,7 +8,7 @@ Review the automatically scored and ranked candidate pool, apply operational jud
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | · | · | R | S | · |
+| **Short term** | · | · | R | S | · |
 | **Mid-term** | · | S | R | · | S |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

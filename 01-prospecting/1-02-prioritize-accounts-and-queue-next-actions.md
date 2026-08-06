@@ -8,7 +8,7 @@ Order the daily work queue so the highest-value next action is clear.
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | R | · | · | S | · |
+| **Short term** | R | · | · | S | · |
 | **Mid-term** | S | · | · | · | R |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

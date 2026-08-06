@@ -8,7 +8,7 @@ Lead the conversation, capture the opportunity and agree the immediate follow-up
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | · | · | · | R | · |
+| **Short term** | · | · | · | R | · |
 | **Mid-term** | · | R | · | · | S |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

@@ -2,7 +2,7 @@
 
 7 activities. None of them is broken down into a flow yet — each page below carries what the matrix says and nothing more.
 
-| ID | Activity | Owner today | Owner mid-term |
+| ID | Activity | Owner short term | Owner mid-term |
 |---|---|---|---|
 | 7.01 | [Support interview scheduling and logistics](7-01-support-interview-scheduling-and-logistics.md) | Junior Ops | Automation |
 | 7.02 | [Prepare candidates for interviews](7-02-prepare-candidates-for-interviews.md) | Senior Ops | KAM |

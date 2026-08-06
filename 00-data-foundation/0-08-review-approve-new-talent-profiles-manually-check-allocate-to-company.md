@@ -8,7 +8,7 @@ Approve or reject new talent profiles and correct material classification issues
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | · | · | R | S | · |
+| **Short term** | · | · | R | S | · |
 | **Mid-term** | · | · | R | S | S |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

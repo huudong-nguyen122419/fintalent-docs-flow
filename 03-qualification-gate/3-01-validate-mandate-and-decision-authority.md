@@ -8,7 +8,7 @@ Confirm that external consultants are approved and that the relevant decision-ma
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | · | · | · | R | · |
+| **Short term** | · | · | · | R | · |
 | **Mid-term** | · | R | · | · | S |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

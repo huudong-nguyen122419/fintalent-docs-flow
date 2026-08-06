@@ -8,7 +8,7 @@ Define the standardized functions, seniority levels and buying-process roles use
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | R | · | · | S | · |
+| **Short term** | R | · | · | S | · |
 | **Mid-term** | S | S | · | R | S |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

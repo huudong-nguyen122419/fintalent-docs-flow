@@ -8,7 +8,7 @@ Use the existing network, referrals, organic outreach or paid sourcing selective
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | S | · | S | R | · |
+| **Short term** | S | · | S | R | · |
 | **Mid-term** | S | S | S | R | S |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

@@ -2,7 +2,7 @@
 
 11 activities. None of them is broken down into a flow yet — each page below carries what the matrix says and nothing more.
 
-| ID | Activity | Owner today | Owner mid-term |
+| ID | Activity | Owner short term | Owner mid-term |
 |---|---|---|---|
 | 9.01 | [Confirm kickoff readiness and project start](9-01-confirm-kickoff-readiness-and-project-start.md) | Senior Ops | KAM |
 | 9.02 | [Monitor engagement health and milestone progress](9-02-monitor-engagement-health-and-milestone-progress.md) | Senior Ops | KAM |

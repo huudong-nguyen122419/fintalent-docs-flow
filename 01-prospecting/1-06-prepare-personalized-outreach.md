@@ -8,7 +8,7 @@ Create a relevant message based on the account, trigger, relationship and likely
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | R | · | · | · | · |
+| **Short term** | R | · | · | · | · |
 | **Mid-term** | R | · | · | · | S |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

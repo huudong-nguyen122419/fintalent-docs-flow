@@ -8,7 +8,7 @@ Set the standard company classifications (Sponsor, PortCo, Corporate) used for t
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | R | · | · | S | · |
+| **Short term** | R | · | · | S | · |
 | **Mid-term** | S | S | · | R | S |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

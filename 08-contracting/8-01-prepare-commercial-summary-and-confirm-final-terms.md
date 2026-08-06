@@ -8,7 +8,7 @@ Summarize scope, timing, commitment, billing and pay rates, payment terms and sp
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | · | · | · | R | · |
+| **Short term** | · | · | · | R | · |
 | **Mid-term** | · | R | · | S | S |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

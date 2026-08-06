@@ -25,7 +25,7 @@ Every activity that turns a cold company into a paid engagement, in the order it
 Each activity page answers three things and no more:
 
 1. **What the activity is** — one line from the matrix.
-2. **Who does it** — today, and in the mid-term model, with `R` for the owner and `S` for support.
+2. **Who does it** — in the short term, and in the mid-term model, with `R` for the owner and `S` for support.
 3. **Where automation is heading** — the intended approach, and where it actually stands.
 
 Anything beyond that is not written yet, and the page says so.

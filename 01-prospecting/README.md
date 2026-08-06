@@ -2,7 +2,7 @@
 
 10 activities. None of them is broken down into a flow yet — each page below carries what the matrix says and nothing more.
 
-| ID | Activity | Owner today | Owner mid-term |
+| ID | Activity | Owner short term | Owner mid-term |
 |---|---|---|---|
 | 1.01 | [Build target account lists and campaign segments](1-01-build-target-account-lists-and-campaign-segments.md) | SDR | SDR |
 | 1.02 | [Prioritize accounts and queue next actions](1-02-prioritize-accounts-and-queue-next-actions.md) | SDR | Automation |

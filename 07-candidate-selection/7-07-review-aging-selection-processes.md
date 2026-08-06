@@ -8,7 +8,7 @@ Identify stalled projects and decide the next action, escalation or closure path
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | · | · | S | R | · |
+| **Short term** | · | · | S | R | · |
 | **Mid-term** | · | R | S | · | S |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

@@ -2,7 +2,7 @@
 
 6 activities. None of them is broken down into a flow yet — each page below carries what the matrix says and nothing more.
 
-| ID | Activity | Owner today | Owner mid-term |
+| ID | Activity | Owner short term | Owner mid-term |
 |---|---|---|---|
 | 5.01 | [Create invitation list](5-01-create-invitation-list.md) | Junior Ops | Junior Ops |
 | 5.02 | [Execute platform invitations](5-02-execute-platform-invitations.md) | Junior Ops | Automation |

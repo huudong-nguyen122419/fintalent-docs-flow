@@ -2,7 +2,7 @@
 
 6 activities. None of them is broken down into a flow yet — each page below carries what the matrix says and nothing more.
 
-| ID | Activity | Owner today | Owner mid-term |
+| ID | Activity | Owner short term | Owner mid-term |
 |---|---|---|---|
 | 6.01 | [Review incoming applications and profile quality](6-01-review-incoming-applications-and-profile-quality.md) | Junior Ops | Automation |
 | 6.02 | [Validate candidate eligibility and project fit](6-02-validate-candidate-eligibility-and-project-fit.md) | Junior Ops | Junior Ops |

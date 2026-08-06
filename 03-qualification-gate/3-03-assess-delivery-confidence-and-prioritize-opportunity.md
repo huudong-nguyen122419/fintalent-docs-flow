@@ -8,7 +8,7 @@ Evaluate whether Fintalent can realistically fill the project and score the oppo
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | S | · | S | R | · |
+| **Short term** | S | · | S | R | · |
 | **Mid-term** | · | R | S | · | S |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

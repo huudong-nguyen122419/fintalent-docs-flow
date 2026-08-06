@@ -8,7 +8,7 @@ Review active opportunities, searches, selections, contracts and engagements; id
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | · | · | S | R | · |
+| **Short term** | · | · | S | R | · |
 | **Mid-term** | · | · | S | R | · |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

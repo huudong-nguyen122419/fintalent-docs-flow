@@ -8,7 +8,7 @@ Record bugs, friction points and improvement ideas arising from real revenue and
 
 | | SDR | KAM | Junior Ops | Senior Ops | Automation |
 |---|---|---|---|---|---|
-| **Today** | · | · | S | R | · |
+| **Short term** | · | · | S | R | · |
 | **Mid-term** | · | S | S | R | S |
 
 `R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

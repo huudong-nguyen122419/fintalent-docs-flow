@@ -2,7 +2,7 @@
 
 4 activities. None of them is broken down into a flow yet — each page below carries what the matrix says and nothing more.
 
-| ID | Activity | Owner today | Owner mid-term |
+| ID | Activity | Owner short term | Owner mid-term |
 |---|---|---|---|
 | 3.01 | [Validate mandate and decision authority](3-01-validate-mandate-and-decision-authority.md) | Senior Ops | KAM |
 | 3.02 | [Assess commercial and operational readiness](3-02-assess-commercial-and-operational-readiness.md) | Senior Ops | KAM |
