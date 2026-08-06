@@ -15,4 +15,4 @@
 | 8.09 | [Activate project and complete onboarding handover](8-09-activate-project-and-complete-onboarding-handover.md) | Junior Ops | Junior Ops |
 | 8.10 | [Notify other candidates and record outcome](8-10-notify-other-candidates-and-record-outcome.md) | Junior Ops | Automation |
 
-`R` primary owner &nbsp;·&nbsp; `S` supporting
+`R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

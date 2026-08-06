@@ -11,4 +11,4 @@
 | 5.05 | [Perform initial talent-project plausibility check](5-05-perform-initial-talent-project-plausibility-check.md) | Junior Ops | Junior Ops |
 | 5.06 | [Adjust or escalate sourcing when necessary](5-06-adjust-or-escalate-sourcing-when-necessary.md) | Senior Ops | KAM |
 
-`R` primary owner &nbsp;·&nbsp; `S` supporting
+`R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

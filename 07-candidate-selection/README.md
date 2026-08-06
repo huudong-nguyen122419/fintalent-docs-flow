@@ -12,4 +12,4 @@
 | 7.06 | [Align finalist on scope, timing and fees](7-06-align-finalist-on-scope-timing-and-fees.md) | Senior Ops | KAM |
 | 7.07 | [Review aging selection processes](7-07-review-aging-selection-processes.md) | Senior Ops | KAM |
 
-`R` primary owner &nbsp;·&nbsp; `S` supporting
+`R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

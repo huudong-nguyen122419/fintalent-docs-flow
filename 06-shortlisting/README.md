@@ -11,4 +11,4 @@
 | 6.05 | [Present candidates and request client feedback](6-05-present-candidates-and-request-client-feedback.md) | Senior Ops | KAM |
 | 6.06 | [Refine search and manage applicant communication](6-06-refine-search-and-manage-applicant-communication.md) | Junior Ops | Junior Ops |
 
-`R` primary owner &nbsp;·&nbsp; `S` supporting
+`R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

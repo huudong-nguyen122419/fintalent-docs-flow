@@ -16,4 +16,4 @@
 | 9.10 | [Complete project closure, feedback and offboarding](9-10-complete-project-closure-feedback-and-offboarding.md) | Senior Ops | KAM |
 | 9.11 | [Capture product feedback and process improvements](9-11-capture-product-feedback-and-process-improvements.md) | Senior Ops | Senior Ops |
 
-`R` primary owner &nbsp;·&nbsp; `S` supporting
+`R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

@@ -9,4 +9,4 @@
 | 10.03 | [Develop portfolio and account opportunities](10-03-develop-portfolio-and-account-opportunities.md) | Senior Ops | KAM |
 | 10.04 | [Develop advocacy and track repeat business](10-04-develop-advocacy-and-track-repeat-business.md) | Senior Ops | KAM |
 
-`R` primary owner &nbsp;·&nbsp; `S` supporting
+`R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

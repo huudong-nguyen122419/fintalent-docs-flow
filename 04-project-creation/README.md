@@ -11,4 +11,4 @@
 | 4.05 | [Perform four-eyes launch-readiness QA](4-05-perform-four-eyes-launch-readiness-qa.md) | Senior Ops | Senior Ops |
 | 4.06 | [Launch project and complete internal handover](4-06-launch-project-and-complete-internal-handover.md) | Junior Ops | Junior Ops |
 
-`R` primary owner &nbsp;·&nbsp; `S` supporting
+`R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

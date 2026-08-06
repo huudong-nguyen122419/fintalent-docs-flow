@@ -9,4 +9,4 @@
 | 3.03 | [Assess delivery confidence and prioritize opportunity](3-03-assess-delivery-confidence-and-prioritize-opportunity.md) | Senior Ops | KAM |
 | 3.04 | [Apply qualification gate and decide next action](3-04-apply-qualification-gate-and-decide-next-action.md) | Senior Ops | KAM |
 
-`R` primary owner &nbsp;·&nbsp; `S` supporting
+`R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

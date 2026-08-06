@@ -15,4 +15,4 @@
 | 1.09 | [Triage replies and qualify initial interest](1-09-triage-replies-and-qualify-initial-interest.md) | SDR | SDR |
 | 1.10 | [Book discovery call and hand over context](1-10-book-discovery-call-and-hand-over-context.md) | SDR | SDR |
 
-`R` primary owner &nbsp;·&nbsp; `S` supporting
+`R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

@@ -9,4 +9,4 @@
 | 2.03 | [Clarify business problem, objective and urgency](2-03-clarify-business-problem-objective-and-urgency.md) | Senior Ops | KAM |
 | 2.04 | [Define project, profile and commercial requirements](2-04-define-project-profile-and-commercial-requirements.md) | Senior Ops | KAM |
 
-`R` primary owner &nbsp;·&nbsp; `S` supporting
+`R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part

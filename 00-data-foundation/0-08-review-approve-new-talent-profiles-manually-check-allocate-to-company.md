@@ -1,6 +1,6 @@
 # 0.08 · Review, approve new talent profiles , manually check & allocate to company
 
-> **0. Data Foundation** &nbsp;·&nbsp; flow not written yet
+> **0. Data Foundation** &nbsp;·&nbsp; part of [Approve a new talent profile](flow-3-approve-a-new-talent-profile.md) &nbsp;·&nbsp; flow not written yet
 
 Approve or reject new talent profiles and correct material classification issues.
 
@@ -23,4 +23,4 @@ Approve or reject new talent profiles and correct material classification issues
 
 ---
 
-*This page is a placeholder for the flow. When it is written it will follow the same shape as the SDR guide: the critical path first, the branches under the step they belong to, and a line on what each step is for.*
+*The steps for this activity belong to **Approve a new talent profile**, which is not written yet. When it is, this page becomes the part of that flow dealing with review, approve new talent profiles , manually check & allocate to company.*
