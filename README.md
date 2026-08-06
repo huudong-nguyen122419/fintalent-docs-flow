@@ -6,9 +6,9 @@ Every activity that turns a cold company into a paid engagement, in the order it
 
 ## The stages
 
-| | Stage | Activities | Flows |
+| | Stage | Activities | Grouping |
 |---|---|---|---|
-| **0** | [Data Foundation](00-data-foundation/README.md) | 11 | 4 |
+| **0** | [Data Foundation](00-data-foundation/README.md) | 11 | 3 groups, 4 on their own |
 | **1** | [Prospecting](01-prospecting/README.md) | 10 | not grouped yet |
 | **2** | [Discovery & Scoping](02-discovery-scoping/README.md) | 4 | not grouped yet |
 | **3** | [Qualification Gate](03-qualification-gate/README.md) | 4 | not grouped yet |
@@ -22,9 +22,9 @@ Every activity that turns a cold company into a paid engagement, in the order it
 
 ## Activities are not flows
 
-An activity says who is responsible for what. A flow says which screen to open and in what order. They are not the same count: several activities turn out to be one piece of work performed on a different object, and writing them separately would produce the same steps three or four times over.
+An activity says who is responsible for what. A flow says which screen to open and in what order. The two do not come in the same quantity, so the activities are being grouped before any flow is written.
 
-Data Foundation has been grouped on that basis — **11 activities, 4 flows** — and the grouping was decided by reading the matrix rather than by intuition: same act, same trigger, and in most cases an identical ownership signature. The remaining stages are still listed activity by activity.
+Data Foundation is grouped by **the object the work acts on** — company data, contact data, talent data — rather than by the kind of work it is. That matches how the work actually arrives: one record open on screen, several things to check on it. Four activities act on no particular record and are left on their own. The remaining stages are still listed activity by activity.
 
 ## How to read a page
 

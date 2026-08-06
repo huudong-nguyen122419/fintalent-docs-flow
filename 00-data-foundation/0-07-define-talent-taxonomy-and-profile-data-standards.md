@@ -1,6 +1,6 @@
 # 0.07 · Define talent taxonomy and profile data standards
 
-> **0. Data Foundation** &nbsp;·&nbsp; part of [Define and maintain a classification](flow-1-define-and-maintain-a-classification.md) &nbsp;·&nbsp; flow not written yet
+> **0. Data Foundation** &nbsp;·&nbsp; part of [Talent Data Management](talent-data-management.md) &nbsp;·&nbsp; flow not written yet
 
 Maintain the classifications required for matching, sourcing and candidate comparison.
 
@@ -19,4 +19,4 @@ Maintain the classifications required for matching, sourcing and candidate compa
 
 ---
 
-*The steps for this activity belong to **Define and maintain a classification**, which is not written yet. When it is, this page becomes the part of that flow dealing with define talent taxonomy and profile data standards.*
+*Part of **Talent Data Management**, whose flows are not written yet. When they are, this page becomes the part dealing with define talent taxonomy and profile data standards.*

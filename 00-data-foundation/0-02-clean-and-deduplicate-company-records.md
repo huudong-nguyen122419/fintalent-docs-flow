@@ -1,6 +1,6 @@
 # 0.02 · Clean and deduplicate company records
 
-> **0. Data Foundation** &nbsp;·&nbsp; part of [Clean and validate records](flow-2-clean-and-validate-records.md) &nbsp;·&nbsp; flow not written yet
+> **0. Data Foundation** &nbsp;·&nbsp; part of [Company Data Management](company-data-management.md) &nbsp;·&nbsp; flow not written yet
 
 Remove duplicates and correct incomplete, inconsistent or outdated company data.
 
@@ -19,4 +19,4 @@ Remove duplicates and correct incomplete, inconsistent or outdated company data.
 
 ---
 
-*The steps for this activity belong to **Clean and validate records**, which is not written yet. When it is, this page becomes the part of that flow dealing with clean and deduplicate company records.*
+*Part of **Company Data Management**, whose flows are not written yet. When they are, this page becomes the part dealing with clean and deduplicate company records.*

@@ -1,6 +1,6 @@
 # 0.05 · Clean and validate contact records
 
-> **0. Data Foundation** &nbsp;·&nbsp; part of [Clean and validate records](flow-2-clean-and-validate-records.md) &nbsp;·&nbsp; flow not written yet
+> **0. Data Foundation** &nbsp;·&nbsp; part of [Contact Data Management](contact-data-management.md) &nbsp;·&nbsp; flow not written yet
 
 Validate contact details, title, employer and company relationship, and correct incomplete, outdated or incorrectly linked records.
 
@@ -19,4 +19,4 @@ Validate contact details, title, employer and company relationship, and correct 
 
 ---
 
-*The steps for this activity belong to **Clean and validate records**, which is not written yet. When it is, this page becomes the part of that flow dealing with clean and validate contact records.*
+*Part of **Contact Data Management**, whose flows are not written yet. When they are, this page becomes the part dealing with clean and validate contact records.*

@@ -1,6 +1,6 @@
 # 0.01 · Define and maintain company type
 
-> **0. Data Foundation** &nbsp;·&nbsp; part of [Define and maintain a classification](flow-1-define-and-maintain-a-classification.md) &nbsp;·&nbsp; flow not written yet
+> **0. Data Foundation** &nbsp;·&nbsp; part of [Company Data Management](company-data-management.md) &nbsp;·&nbsp; flow not written yet
 
 Set the standard company classifications (Sponsor, PortCo, Corporate) used for targeting, reporting and ownership.
 
@@ -24,4 +24,4 @@ Set the standard company classifications (Sponsor, PortCo, Corporate) used for t
 
 ---
 
-*The steps for this activity belong to **Define and maintain a classification**, which is not written yet. When it is, this page becomes the part of that flow dealing with define and maintain company type.*
+*Part of **Company Data Management**, whose flows are not written yet. When they are, this page becomes the part dealing with define and maintain company type.*

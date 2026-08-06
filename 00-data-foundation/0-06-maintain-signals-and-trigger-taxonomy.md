@@ -1,6 +1,6 @@
 # 0.06 · Maintain signals and trigger taxonomy
 
-> **0. Data Foundation** &nbsp;·&nbsp; part of [Define and maintain a classification](flow-1-define-and-maintain-a-classification.md) &nbsp;·&nbsp; flow not written yet
+> **0. Data Foundation** &nbsp;·&nbsp; flow not written yet
 
 Define and maintain the commercial signals used for prospecting and expansion.
 
@@ -23,4 +23,4 @@ Define and maintain the commercial signals used for prospecting and expansion.
 
 ---
 
-*The steps for this activity belong to **Define and maintain a classification**, which is not written yet. When it is, this page becomes the part of that flow dealing with maintain signals and trigger taxonomy.*
+*This page is a placeholder for the flow. When it is written it will follow the same shape as the SDR guide: the critical path first, the branches under the step they belong to, and a line on what each step is for.*

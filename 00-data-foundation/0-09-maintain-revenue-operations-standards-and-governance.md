@@ -1,6 +1,6 @@
 # 0.09 · Maintain revenue operations standards and governance
 
-> **0. Data Foundation** &nbsp;·&nbsp; part of [Run the daily operation](flow-4-run-the-daily-operation.md) &nbsp;·&nbsp; flow not written yet
+> **0. Data Foundation** &nbsp;·&nbsp; flow not written yet
 
 Maintain Standard Operating Procedure (SOP), templates, playbooks and internal guidance, and ensure pipeline data, activity records, KPI definitions, shared-inbox rules and response Service Level Agreement (SLA) remain standardized and current.
 
@@ -19,4 +19,4 @@ Maintain Standard Operating Procedure (SOP), templates, playbooks and internal g
 
 ---
 
-*The steps for this activity belong to **Run the daily operation**, which is not written yet. When it is, this page becomes the part of that flow dealing with maintain revenue operations standards and governance.*
+*This page is a placeholder for the flow. When it is written it will follow the same shape as the SDR guide: the critical path first, the branches under the step they belong to, and a line on what each step is for.*
