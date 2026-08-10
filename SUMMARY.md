@@ -95,3 +95,8 @@
   * [10.02 · Conduct project-completion follow-up](10-expansion/10-02-conduct-project-completion-follow-up.md)
   * [10.03 · Develop portfolio and account opportunities](10-expansion/10-03-develop-portfolio-and-account-opportunities.md)
   * [10.04 · Develop advocacy and track repeat business](10-expansion/10-04-develop-advocacy-and-track-repeat-business.md)
+
+* [Prompts](prompt/README.md)
+  * [Flow Audit](prompt/flow-audit/README.md)
+    * [v2 · current](prompt/flow-audit/v2.md)
+    * [v1](prompt/flow-audit/v1.md)
