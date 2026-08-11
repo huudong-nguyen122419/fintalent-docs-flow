@@ -76,25 +76,6 @@ _12 pain points found, counted per class. Untyped-at-birth (P4) accepted as inte
 
 _Rows = how bad it is when it happens (S5 worst) · columns = how expensive it is to fix (E1 cheapest)._
 
-```mermaid
-block-beta
-  columns 6
-  space:1 h1["E1 · <0.5 day"] h2["E2"] h3["E3 · 1–3 days"] h4["E4"] h5["E5 · >5 days"]
-  r5["S5"] z51[" "] z52["P1   P3"] c53[" "] c54[" "] c55[" "]
-  r4["S4"] z41["P2"] z42["P13"] c43[" "] c44[" "] c45[" "]
-  r3["S3"] c31[" "] c32["P6"] c33[" "] c34["P5"] c35[" "]
-  r2["S2"] c21["P8  P10  P12"] c22["P7  P11"] c23["P9"] c24[" "] c25[" "]
-  r1["S1"] c11[" "] c12[" "] c13[" "] c14[" "] c15[" "]
-
-  classDef zone fill:#e8f5ec,stroke:#d8dde1,color:#1a1a19
-  classDef cell fill:#ffffff,stroke:#e6e4de,color:#5b6069
-  classDef axis fill:#ffffff,stroke:#ffffff,color:#8a8e96
-  class z51,z52,z41,z42 zone
-  class c53,c54,c55,c43,c44,c45,c31,c32,c33,c34,c35,c21,c22,c23,c24,c25,c11,c12,c13,c14,c15 cell
-  class h1,h2,h3,h4,h5,r1,r2,r3,r4,r5 axis
-
-```
-
 |        | E1 · <0.5 day      | E2                                                     | E3 · 1–3 days                                               | E4     | E5 · >5 days |
 | ------ | ------------------ | ------------------------------------------------------ | ----------------------------------------------------------- | ------ | ------------ |
 | **S5** | 　                  | 　                                                      | <mark style="background-color:$success;">**P1 · P3**</mark> |        |              |
