@@ -1,6 +1,6 @@
 # 0.03 · Validate company ownership and account assignment
 
-> **0. Data Foundation** &nbsp;·&nbsp; part of [Company Data Management](company-data-management.md) &nbsp;·&nbsp; flow not written yet
+> **0. Data Foundation** &nbsp;·&nbsp; flow not written yet
 
 Ensure each account has a clear owner and the correct team, portfolio and relationship links.
 

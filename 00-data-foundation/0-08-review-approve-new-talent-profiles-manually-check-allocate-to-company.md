@@ -1,6 +1,6 @@
 # 0.08 · Review, approve new talent profiles , manually check & allocate to company
 
-> **0. Data Foundation** &nbsp;·&nbsp; part of [Talent Data Management](talent-data-management.md) &nbsp;·&nbsp; flow not written yet
+> **0. Data Foundation** &nbsp;·&nbsp; flow not written yet
 
 Approve or reject new talent profiles and correct material classification issues.
 

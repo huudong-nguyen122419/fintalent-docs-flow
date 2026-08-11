@@ -1,6 +1,6 @@
 # 0.02 · Clean and deduplicate company records
 
-> **0. Data Foundation** &nbsp;·&nbsp; part of [Company Data Management](company-data-management.md) &nbsp;·&nbsp; flow not written yet
+> **0. Data Foundation** &nbsp;·&nbsp; flow not written yet
 
 Remove duplicates and correct incomplete, inconsistent or outdated company data.
 

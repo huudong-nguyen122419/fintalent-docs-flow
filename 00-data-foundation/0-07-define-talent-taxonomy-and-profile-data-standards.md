@@ -1,6 +1,6 @@
 # 0.07 · Define talent taxonomy and profile data standards
 
-> **0. Data Foundation** &nbsp;·&nbsp; part of [Talent Data Management](talent-data-management.md) &nbsp;·&nbsp; flow not written yet
+> **0. Data Foundation** &nbsp;·&nbsp; flow not written yet
 
 Maintain the classifications required for matching, sourcing and candidate comparison.
 

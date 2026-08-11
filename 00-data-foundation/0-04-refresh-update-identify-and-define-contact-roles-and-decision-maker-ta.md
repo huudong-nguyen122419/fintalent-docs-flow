@@ -1,6 +1,6 @@
 # 0.04 · Refresh& Update, Identify and define contact roles and decision-maker taxonomy
 
-> **0. Data Foundation** &nbsp;·&nbsp; part of [Contact Data Management](contact-data-management.md) &nbsp;·&nbsp; flow not written yet
+> **0. Data Foundation** &nbsp;·&nbsp; flow not written yet
 
 Define the standardized functions, seniority levels and buying-process roles used to classify and prioritize contacts.
 

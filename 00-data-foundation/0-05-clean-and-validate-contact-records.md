@@ -1,6 +1,6 @@
 # 0.05 · Clean and validate contact records
 
-> **0. Data Foundation** &nbsp;·&nbsp; part of [Contact Data Management](contact-data-management.md) &nbsp;·&nbsp; flow not written yet
+> **0. Data Foundation** &nbsp;·&nbsp; flow not written yet
 
 Validate contact details, title, employer and company relationship, and correct incomplete, outdated or incorrectly linked records.
 

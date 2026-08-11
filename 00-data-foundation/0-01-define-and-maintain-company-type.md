@@ -2,7 +2,7 @@
 
 ## 0.01 · Define & maintain company type
 
-> **0. Data Foundation** · part of [Company Data Management](company-data-management.md) · **Lean flow audit · pass 1 + 2 · rev 5**
+> **0. Data Foundation** · **Lean flow audit · pass 1 + 2 · rev 5**
 
 > **Verdict:** reads work · Corporate over-tags non-clients · 2 silent failures · quick wins ≈ 10 days
 
