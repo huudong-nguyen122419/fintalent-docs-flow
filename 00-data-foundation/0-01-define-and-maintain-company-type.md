@@ -108,14 +108,14 @@ _Four fixes, ≈ 8–12 dev-days. Build instructions in §9. The eight pains out
 
 |                                                       | Fix                                                                                                                                                                                                                 | Worth                                                                       |
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| **1** <mark style="color:$danger;">**BLOCKER**</mark> | **Redefine "Corporate" = possible client.** Move banks, advisories and law firms into their own new types — Advisory Firm / Law Firm / Banks / Other — via the provider's industry data; backfill existing records. | every type-filtered list and report stops over-counting, for \~2–3 dev-days |
-| **2** <mark style="color:$danger;">**BLOCKER**</mark> | **Make company type correctable.** No screen or control lets an admin fix a wrong type today.                                                                                                                       | trustworthy target lists and reports, for \~1–3 dev-days                    |
-| **3** <mark style="color:orange;">**CRITICAL**</mark> | **One canonical company type.** Promote the official tag (eight values after win 1); retire the legacy free-text label — gate G4.                                                                                   | cross-team reports finally agree, for \~3–5 dev-days                        |
-| **4** <mark style="color:$warning;">**MAJOR**</mark>  | **Audit bulk edits.** Bulk edits re-score but skip the record of who changed what.                                                                                                                                  | every bulk action becomes traceable, for \~1–2 dev-days                     |
+| **1** <mark style="color:$danger;background-color:$danger;">**BLOCKER**</mark> | **Redefine "Corporate" = possible client.** Move banks, advisories and law firms into their own new types — Advisory Firm / Law Firm / Banks / Other — via the provider's industry data; backfill existing records. | every type-filtered list and report stops over-counting, for \~2–3 dev-days |
+| **2** <mark style="color:$danger;background-color:$danger;">**BLOCKER**</mark> | **Make company type correctable.** No screen or control lets an admin fix a wrong type today.                                                                                                                       | trustworthy target lists and reports, for \~1–3 dev-days                    |
+| **3** <mark style="color:orange;background-color:orange;">**CRITICAL**</mark> | **One canonical company type.** Promote the official tag (eight values after win 1); retire the legacy free-text label — gate G4.                                                                                   | cross-team reports finally agree, for \~3–5 dev-days                        |
+| **4** <mark style="color:$warning;background-color:$warning;">**MAJOR**</mark>  | **Audit bulk edits.** Bulk edits re-score but skip the record of who changed what.                                                                                                                                  | every bulk action becomes traceable, for \~1–2 dev-days                     |
 
 ### Severity scoreboard
 
-| <mark style="color:$danger;">BLOCKER</mark> | <mark style="color:orange;">CRITICAL</mark> | <mark style="color:$warning;">MAJOR</mark> | <mark style="color:$info;">MINOR</mark> |
+| <mark style="color:$danger;background-color:$danger;">BLOCKER</mark> | <mark style="color:orange;background-color:orange;">CRITICAL</mark> | <mark style="color:$warning;background-color:$warning;">MAJOR</mark> | <mark style="color:$info;background-color:$info;">MINOR</mark> |
 | :-----------------------------------------: | :-----------------------------------------: | :----------------------------------------: | :-------------------------------------: |
 |                    **2**                    |                    **2**                    |                    **5**                   |                  **3**                  |
 
@@ -127,8 +127,8 @@ _Rows = how bad it is when it happens (S5 worst) · columns = how expensive it i
 
 |        | E1 · <0.5 day      | E2                                                     | E3 · 1–3 days                                               | E4     | E5 · >5 days |
 | ------ | ------------------ | ------------------------------------------------------ | ----------------------------------------------------------- | ------ | ------------ |
-| **S5** | 　                  | 　                                                      | <mark style="background-color:$success;">**P1 · P3**</mark> |        |              |
-| **S4** | 　                  | <mark style="background-color:$success;">**P2**</mark> | <mark style="background-color:$success;">**P13**</mark>     |        |              |
+| **S5** | <mark style="color:$success;background-color:$success;">　</mark> | <mark style="color:$success;background-color:$success;">　</mark>                                                     | <mark style="background-color:$success;">**P1 · P3**</mark> |        |              |
+| **S4** | <mark style="color:$success;background-color:$success;">　</mark> | <mark style="background-color:$success;">**P2**</mark> | <mark style="background-color:$success;">**P13**</mark>     |        |              |
 | **S3** |                    |                                                        | **P6**                                                      |        | **P5**       |
 | **S2** | **P8 · P10 · P12** |                                                        | **P7 · P11**                                                | **P9** |              |
 | **S1** |                    |                                                        |                                                             |        |              |
@@ -149,18 +149,18 @@ _Read the grid as the opening argument, not the verdict._
 
 |                                              | Pain                                                                       |    RPN |
 | -------------------------------------------- | -------------------------------------------------------------------------- | -----: |
-| <mark style="color:$danger;">**P1**</mark>   | No way to correct a company's type                                         | **60** |
-| <mark style="color:$danger;">**P13**</mark>  | Corporate = catch-all; banks & advisories counted as clients · **PRD GAP** | **60** |
-| <mark style="color:orange;">**P3**</mark>    | Refresh silently overwrites classification                                 |     50 |
-| <mark style="color:orange;">**P5**</mark>    | 3+ competing type taxonomies                                               |     36 |
-| <mark style="color:$warning;">**P6**</mark>  | Bulk edits skip the audit trail                                            |     30 |
-| <mark style="color:$warning;">**P2**</mark>  | On-demand refresh disconnected                                             |     24 |
-| <mark style="color:$warning;">**P9**</mark>  | Label list has two sources of truth                                        |     16 |
-| <mark style="color:$warning;">**P10**</mark> | One-sided lifecycle validation                                             |     16 |
-| <mark style="color:$warning;">**P11**</mark> | Low-confidence classifications have no review queue                        |     16 |
-| <mark style="color:$info;">**P7**</mark>     | Missing company shows an empty panel                                       |     12 |
-| <mark style="color:$info;">**P8**</mark>     | Bad filter values dropped without error                                    |     10 |
-| <mark style="color:$info;">**P12**</mark>    | Bulk "all matching" rejection offers no recovery guidance                  |      8 |
+| <mark style="color:$danger;background-color:$danger;">**P1**</mark>   | No way to correct a company's type                                         | **60** |
+| <mark style="color:$danger;background-color:$danger;">**P13**</mark>  | Corporate = catch-all; banks & advisories counted as clients · **PRD GAP** | **60** |
+| <mark style="color:orange;background-color:orange;">**P3**</mark>    | Refresh silently overwrites classification                                 |     50 |
+| <mark style="color:orange;background-color:orange;">**P5**</mark>    | 3+ competing type taxonomies                                               |     36 |
+| <mark style="color:$warning;background-color:$warning;">**P6**</mark>  | Bulk edits skip the audit trail                                            |     30 |
+| <mark style="color:$warning;background-color:$warning;">**P2**</mark>  | On-demand refresh disconnected                                             |     24 |
+| <mark style="color:$warning;background-color:$warning;">**P9**</mark>  | Label list has two sources of truth                                        |     16 |
+| <mark style="color:$warning;background-color:$warning;">**P10**</mark> | One-sided lifecycle validation                                             |     16 |
+| <mark style="color:$warning;background-color:$warning;">**P11**</mark> | Low-confidence classifications have no review queue                        |     16 |
+| <mark style="color:$info;background-color:$info;">**P7**</mark>     | Missing company shows an empty panel                                       |     12 |
+| <mark style="color:$info;background-color:$info;">**P8**</mark>     | Bad filter values dropped without error                                    |     10 |
+| <mark style="color:$info;background-color:$info;">**P12**</mark>    | Bulk "all matching" rejection offers no recovery guidance                  |      8 |
 
 ### Open gates
 
@@ -168,8 +168,8 @@ _Open gates only (G1 accepted in rev 4 · G2 retired · G3 withdrawn — untyped
 
 | Gate                | Question                                                                                                                                                                                  | Auditor recommendation                                                                                                                                      |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **G5** `REVERSIBLE` | Adopt the five new service-firm types — Advisory Firm, Law Firm, Banks, Accounting Firm, Other — mapped from the provider's own industry data, leaving Corporate = possible clients only? | **Yes** — start with the draft mapping (gate G5, §3); the backfill is re-runnable, so an amended mapping re-applies cleanly. **Executes on silence (48h).** |
-| **G4** `ONE-WAY`    | Taxonomy end-state: which vocabulary is canonical for "company type"?                                                                                                                     | Promote the official type tag and retire the legacy text label — now gates quick-win card 3. **No silence default** — answer on the §3 options.             |
+| **G5** <mark style="color:$success;background-color:$success;">REVERSIBLE</mark> | Adopt the five new service-firm types — Advisory Firm, Law Firm, Banks, Accounting Firm, Other — mapped from the provider's own industry data, leaving Corporate = possible clients only? | **Yes** — start with the draft mapping (gate G5, §3); the backfill is re-runnable, so an amended mapping re-applies cleanly. **Executes on silence (48h).** |
+| **G4** <mark style="color:$danger;background-color:$danger;">ONE-WAY</mark>    | Taxonomy end-state: which vocabulary is canonical for "company type"?                                                                                                                     | Promote the official type tag and retire the legacy text label — now gates quick-win card 3. **No silence default** — answer on the §3 options.             |
 
 ***
 
@@ -195,7 +195,7 @@ _Steps 1→7 left to right as the journey runs. P13 is created by step 4's re-de
 
 ### Scenarios
 
-`CONFIRMED` _in rev 4; CPO may still trim before §5 expansion. One happy path + six variants the code can actually produce, worst first by provisional score._
+<mark style="color:$success;background-color:$success;">CONFIRMED</mark> _in rev 4; CPO may still trim before §5 expansion. One happy path + six variants the code can actually produce, worst first by provisional score._
 
 | #      | Scenario                                                  | Trigger                                                                                                                                                                                                                                | Persona               |               Σ RPN |
 | ------ | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ------------------: |
@@ -213,14 +213,14 @@ _Answers the COO's §0 row by looking, not memory. Support can forward this as-i
 
 | What a user would report                                          | Who hits it                                                                | Workaround today                                                                                            |
 | ----------------------------------------------------------------- | -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| _"My Corporate list is full of banks and M\&A advisories."_ `P13` | Anyone targeting or reporting from the Corporate filter (SDRs, leadership) | Cross-check each company's industry (shown on the company panel; industry filters exist) and prune by hand. |
-| _"This company has the wrong type and I can't change it."_ `P1`   | Data stewards reviewing records                                            | None in the product — note it elsewhere; the wrong tag stays.                                               |
+| _"My Corporate list is full of banks and M\&A advisories."_ <mark style="color:$danger;background-color:$danger;">P13</mark> | Anyone targeting or reporting from the Corporate filter (SDRs, leadership) | Cross-check each company's industry (shown on the company panel; industry filters exist) and prune by hand. |
+| _"This company has the wrong type and I can't change it."_ <mark style="color:$danger;background-color:$danger;">P1</mark>   | Data stewards reviewing records                                            | None in the product — note it elsewhere; the wrong tag stays.                                               |
 
 ***
 
 ## 3 · Change briefs
 
-**For: CTO.** _Change contracts, not implementations. Every change is tagged `DECIDED` or `NEEDS CTO` and traced to a pain ID. JSON samples live only here. Exact file evidence: technical appendix (rev 3)._
+**For: CTO.** _Change contracts, not implementations. Every change is tagged <mark style="color:$success;background-color:$success;">DECIDED</mark> or <mark style="color:$warning;background-color:$warning;">NEEDS CTO</mark> and traced to a pain ID. JSON samples live only here. Exact file evidence: technical appendix (rev 3)._
 
 > **Takeaway:** four changes make company type mean the right thing, writable, audited and single-vocabulary; one call remains yours — the taxonomy end-state (G4), now gating quick-win card 3; the industry → type mapping (G5) defaults in 48h.
 
@@ -232,13 +232,13 @@ _Answers the COO's §0 row by looking, not memory. Support can forward this as-i
 
 | Store           | Change needed                                                                                                                                                                                                                                                                                                         | Why      | Migration risk                                                                                                                                                                 | Decision                                                              |
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- |
-| Company records | No schema change for editing — the three type values already exist; only the write whitelist widens.                                                                                                                                                                                                                  | P1 · G1  | None.                                                                                                                                                                          | `DECIDED`                                                             |
-| Audit log store | No new table — bulk writes reuse the existing per-field change-history records the single edit already produces.                                                                                                                                                                                                      | P6       | Low — write volume rises on bulk actions; events are batched.                                                                                                                  | `DECIDED`                                                             |
-| Company records | Add five new type values — **Advisory Firm, Law Firm, Banks, Accounting Firm, Other** — following the existing independent-flag pattern; the provider's industry evidence (sector, industry hierarchy, NAICS codes) already stored per company drives them; a **re-runnable backfill** reclassifies existing records. | P13 · G5 | Low–medium — additive flags, deterministic from stored fields; the search index gains the new fields (one rebuild window needed); a re-run applies an amended mapping cleanly. | `DECIDED` mechanics; the industry → type mapping is G5 (48h default). |
+| Company records | No schema change for editing — the three type values already exist; only the write whitelist widens.                                                                                                                                                                                                                  | P1 · G1  | None.                                                                                                                                                                          | <mark style="color:$success;background-color:$success;">DECIDED</mark>                                                             |
+| Audit log store | No new table — bulk writes reuse the existing per-field change-history records the single edit already produces.                                                                                                                                                                                                      | P6       | Low — write volume rises on bulk actions; events are batched.                                                                                                                  | <mark style="color:$success;background-color:$success;">DECIDED</mark>                                                             |
+| Company records | Add five new type values — **Advisory Firm, Law Firm, Banks, Accounting Firm, Other** — following the existing independent-flag pattern; the provider's industry evidence (sector, industry hierarchy, NAICS codes) already stored per company drives them; a **re-runnable backfill** reclassifies existing records. | P13 · G5 | Low–medium — additive flags, deterministic from stored fields; the search index gains the new fields (one rebuild window needed); a re-run applies an amended mapping cleanly. | <mark style="color:$success;background-color:$success;">DECIDED</mark> mechanics; the industry → type mapping is G5 (48h default). |
 
 #### 3A-C · API updates
 
-**Edit one company** · existing operation, widened · `DECIDED · G1`
+**Edit one company** · existing operation, widened · <mark style="color:$success;background-color:$success;">DECIDED · G1</mark>
 
 Accepts all type values — the existing three plus Advisory Firm / Law Firm / Banks / Accounting Firm / Other (`true` / `false` / `null-to-clear`) — and writes the audit record — resolves P1. With refresh protection descoped (P3), the next provider refresh may overwrite a manual value. Back-compat: additive input fields, non-breaking, no version bump.
 
@@ -262,7 +262,7 @@ mutation updateMmCompanyV2Fields
     "extensions": { "code": "BAD_USER_INPUT" } } ] }
 ```
 
-**Bulk edit companies** · existing operation, widened + audited · `DECIDED`
+**Bulk edit companies** · existing operation, widened + audited · <mark style="color:$success;background-color:$success;">DECIDED</mark>
 
 Gains the same three type fields and emits the per-company audit records the single edit already produces — resolves P6, enables bulk type assignment. The count-guard rejection stays; its message gains recovery guidance (P12, copy in 3B-c). Back-compat: additive, non-breaking.
 
@@ -286,11 +286,11 @@ mutation bulkUpdateMmCompanyV2Fields
 
 | Gate   | Rule / question                                                                                               | Options considered                                                                                                                                                                                                                                                                                                                          | Status                                                                                                                                                                                                                                                                                                  |
 | ------ | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **G1** | Who may edit company type; are the three values exclusive?                                                    | a) all admins, single-select · b) senior data roles, independent values                                                                                                                                                                                                                                                                     | `DECIDED` — **(b)**: matches stored data and the existing role model; accepted via the §0 strip.                                                                                                                                                                                                        |
-| **G2** | Do manual type fixes survive provider refreshes?                                                              | a) provider always wins · b) admin-owned values protected via provenance                                                                                                                                                                                                                                                                    | `DESCOPED` — product removed the refresh-protection work on 2026-08-11; today's behaviour stays (a) provider always wins. P3 remains on the pain register.                                                                                                                                              |
-| **G3** | Give untyped companies a visible home + backfill?                                                             | a) leave invisible · b) untyped filter now, classifier backfill after                                                                                                                                                                                                                                                                       | `WITHDRAWN` — untyped-at-birth accepted as intended behaviour (2026-08-11); no untyped filter or classifier backfill ships.                                                                                                                                                                             |
-| **G5** | Corporate = client-eligible only (PRD gap P13): which provider industries map to which of the five new types? | a) draft mapping on the provider's sector/industry codes — commercial & investment banks → Banks; M\&A / corporate-finance advisories, consultancies → Advisory Firm; accountancy & audit → Accounting Firm; law firms → Law Firm; other non-client service industries → Other · b) coarser split — Banks plus one combined "Services" type | `DEFAULTS 48H` — auditor recommends (a), reviewed quarterly; REVERSIBLE via the re-runnable backfill. Reclassified firms leave the Corporate filter by design; unmapped industries stay Corporate. Companies with no industry data stay Corporate and are logged for review. CPO owns the mapping (§0). |
-| **G4** | Taxonomy end-state: which vocabulary is canonical for "company type"?                                         | a) promote the official type tag (now eight values), retire the legacy text label · b) adopt the automated two-level classification as canonical                                                                                                                                                                                            | **`NEEDS CTO`** — auditor recommends (a) now, revisit (b) once a review queue exists (P11). Resolves P5; gates quick-win card 3.                                                                                                                                                                        |
+| **G1** | Who may edit company type; are the three values exclusive?                                                    | a) all admins, single-select · b) senior data roles, independent values                                                                                                                                                                                                                                                                     | <mark style="color:$success;background-color:$success;">DECIDED</mark> — **(b)**: matches stored data and the existing role model; accepted via the §0 strip.                                                                                                                                                                                                        |
+| **G2** | Do manual type fixes survive provider refreshes?                                                              | a) provider always wins · b) admin-owned values protected via provenance                                                                                                                                                                                                                                                                    | <mark style="color:$info;background-color:$info;">DESCOPED</mark> — product removed the refresh-protection work on 2026-08-11; today's behaviour stays (a) provider always wins. P3 remains on the pain register.                                                                                                                                              |
+| **G3** | Give untyped companies a visible home + backfill?                                                             | a) leave invisible · b) untyped filter now, classifier backfill after                                                                                                                                                                                                                                                                       | <mark style="color:$info;background-color:$info;">WITHDRAWN</mark> — untyped-at-birth accepted as intended behaviour (2026-08-11); no untyped filter or classifier backfill ships.                                                                                                                                                                             |
+| **G5** | Corporate = client-eligible only (PRD gap P13): which provider industries map to which of the five new types? | a) draft mapping on the provider's sector/industry codes — commercial & investment banks → Banks; M\&A / corporate-finance advisories, consultancies → Advisory Firm; accountancy & audit → Accounting Firm; law firms → Law Firm; other non-client service industries → Other · b) coarser split — Banks plus one combined "Services" type | <mark style="color:$warning;background-color:$warning;">DEFAULTS 48H</mark> — auditor recommends (a), reviewed quarterly; REVERSIBLE via the re-runnable backfill. Reclassified firms leave the Corporate filter by design; unmapped industries stay Corporate. Companies with no industry data stay Corporate and are logged for review. CPO owns the mapping (§0). |
+| **G4** | Taxonomy end-state: which vocabulary is canonical for "company type"?                                         | a) promote the official type tag (now eight values), retire the legacy text label · b) adopt the automated two-level classification as canonical                                                                                                                                                                                            | **<mark style="color:$warning;background-color:$warning;">NEEDS CTO</mark>** — auditor recommends (a) now, revisit (b) once a review queue exists (P11). Resolves P5; gates quick-win card 3.                                                                                                                                                                        |
 
 #### 3A-E · Completion checklist _(verification only)_
 
@@ -308,10 +308,10 @@ mutation bulkUpdateMmCompanyV2Fields
 
 | Operation                | Status       | What the frontend must change                                                                                                                               | Replaces                                                                                                                         | Pain     |
 | ------------------------ | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| Edit one company         | `CHANGED`    | Add a role-gated "Company type" editor row in the company panel (same inline pattern as lifecycle); optimistic badge update; extend the editable-field set. | Read-only badges as the only type surface.                                                                                       | P1       |
-| Bulk edit companies      | `CHANGED`    | Add "Set company type" to the bulk action bar (reuses the bucket/labels panel pattern); improve the count-drift rejection message (copy below).             | Bucket/labels as the only bulk taxonomy.                                                                                         | P6 · P12 |
-| List filter              | `CHANGED`    | Add "Advisory Firm", "Law Firm", "Banks", "Accounting Firm" and "Other" values to the company-type filter chips; counts come from the existing facet call.  | —                                                                                                                                | P13      |
-| Legacy text type display | `DEPRECATED` | Stop presenting the legacy free-text type on legacy surfaces once G4 is answered.                                                                           | Replaced by the official type tag everywhere. Removal note: hide after G4 decision; field stays in storage until pass-3 cleanup. | P5       |
+| Edit one company         | <mark style="color:$info;background-color:$info;">CHANGED</mark>    | Add a role-gated "Company type" editor row in the company panel (same inline pattern as lifecycle); optimistic badge update; extend the editable-field set. | Read-only badges as the only type surface.                                                                                       | P1       |
+| Bulk edit companies      | <mark style="color:$info;background-color:$info;">CHANGED</mark>    | Add "Set company type" to the bulk action bar (reuses the bucket/labels panel pattern); improve the count-drift rejection message (copy below).             | Bucket/labels as the only bulk taxonomy.                                                                                         | P6 · P12 |
+| List filter              | <mark style="color:$info;background-color:$info;">CHANGED</mark>    | Add "Advisory Firm", "Law Firm", "Banks", "Accounting Firm" and "Other" values to the company-type filter chips; counts come from the existing facet call.  | —                                                                                                                                | P13      |
+| Legacy text type display | <mark style="color:$info;background-color:$info;">DEPRECATED</mark> | Stop presenting the legacy free-text type on legacy surfaces once G4 is answered.                                                                           | Replaced by the official type tag everywhere. Removal note: hide after G4 decision; field stays in storage until pass-3 cleanup. | P5       |
 
 #### 3B-C · Changed journey + UX copy
 
@@ -325,10 +325,10 @@ mutation bulkUpdateMmCompanyV2Fields
 
 | Surface                        | Current copy                                                       | Proposed copy                                                                                 | State          | Decision  |
 | ------------------------------ | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- | -------------- | --------- |
-| Company panel — type row       | _(badges only, no label or control)_                               | "Company type" · helper: _"May be overwritten by the next provider refresh."_                 | Default / edit | `DECIDED` |
-| Bulk "all matching" rejection  | Raw error toast surfacing the server message `UNVERIFIED verbatim` | _"The matching list changed while you were editing. Review the updated count and try again."_ | Error toast    | `DECIDED` |
-| Type filter chips              | "Sponsor · Portfolio · Corporate"                                  | Add chips: _"Advisory Firm · Law Firm · Banks · Accounting Firm · Other"_                     | Filter bar     | `DECIDED` |
-| Company panel — missing record | _(empty panel, no message)_                                        | _"This company was merged or removed. Open the surviving record from its parent link."_       | Empty state    | `DECIDED` |
+| Company panel — type row       | _(badges only, no label or control)_                               | "Company type" · helper: _"May be overwritten by the next provider refresh."_                 | Default / edit | <mark style="color:$success;background-color:$success;">DECIDED</mark> |
+| Bulk "all matching" rejection  | Raw error toast surfacing the server message `UNVERIFIED verbatim` | _"The matching list changed while you were editing. Review the updated count and try again."_ | Error toast    | <mark style="color:$success;background-color:$success;">DECIDED</mark> |
+| Type filter chips              | "Sponsor · Portfolio · Corporate"                                  | Add chips: _"Advisory Firm · Law Firm · Banks · Accounting Firm · Other"_                     | Filter bar     | <mark style="color:$success;background-color:$success;">DECIDED</mark> |
+| Company panel — missing record | _(empty panel, no message)_                                        | _"This company was merged or removed. Open the surviving record from its parent link."_       | Empty state    | <mark style="color:$success;background-color:$success;">DECIDED</mark> |
 
 #### 3B-D · Completion checklist _(verification only)_
 
@@ -347,7 +347,7 @@ mutation bulkUpdateMmCompanyV2Fields
 
 ### 1 · Reclassify non-clients into the new types
 
-<mark style="color:$danger;">`P13 · RPN 60 · BLOCKER · PRD GAP`</mark> · `E3 ≈ 2–3 days`
+<mark style="color:$danger;background-color:$danger;">P13 · RPN 60 · BLOCKER · PRD GAP</mark> · `E3 ≈ 2–3 days`
 
 **PM:** Banks, advisories and law firms leave the Corporate prospect bucket and become their own filterable types (Reach 3 × Impact 5, Confidence High on the mechanism) — the definition the business ruled on. Waits only on the G5 mapping (48h default).
 
@@ -377,7 +377,7 @@ mutation bulkUpdateMmCompanyV2Fields
 
 ### 2 · Make company type editable
 
-<mark style="color:$danger;">`P1 · RPN 60 · BLOCKER`</mark> · `E2 ≈ 1–3 days`
+<mark style="color:$danger;background-color:$danger;">P1 · RPN 60 · BLOCKER</mark> · `E2 ≈ 1–3 days`
 
 **PM:** Reaches every data steward and everyone downstream of their lists (Reach 3 × Impact 5, Confidence High) for effort 2 — the highest-return change in the audit.
 
@@ -404,7 +404,7 @@ mutation bulkUpdateMmCompanyV2Fields
 
 ### 3 · Consolidate the type vocabularies
 
-<mark style="color:orange;">`P5 · RPN 36 · CRITICAL`</mark> · `E4 ≈ 3–5 days`
+<mark style="color:orange;background-color:orange;">P5 · RPN 36 · CRITICAL</mark> · `E4 ≈ 3–5 days`
 
 **PM:** One canonical "company type" ends hand-reconciled cross-team reports (Reach 3 × Impact 3, Confidence Med). Waits on G4 — the one ONE-WAY gate; the auditor recommends promoting the official tag and retiring the legacy text label.
 
@@ -430,7 +430,7 @@ mutation bulkUpdateMmCompanyV2Fields
 
 ### 4 · Audit bulk edits
 
-<mark style="color:$warning;">`P6 · RPN 30 · MAJOR`</mark> · `E2 ≈ 1–2 days`
+<mark style="color:$warning;background-color:$warning;">P6 · RPN 30 · MAJOR</mark> · `E2 ≈ 1–2 days`
 
 **PM:** Closes the _"who changed this?"_ gap for every bulk action (Reach 2 × Impact 3, Confidence High) for effort 2.
 
