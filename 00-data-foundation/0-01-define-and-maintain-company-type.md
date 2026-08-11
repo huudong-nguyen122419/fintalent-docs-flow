@@ -50,23 +50,23 @@ Rev 5 adds the product ruling of 2026-08-10 — **Corporate = a Mergermarket-sou
 
 > **Takeaway:** finding companies by type works, but **"Corporate" itself is mis-defined** — it sweeps in banks and advisories — and **nobody can fix a wrong type**; four quick wins (≈ 10 dev-days) close the gaps.
 
-### 1 · What problem are we solving?
+## The problem
 
 Every company must be classified Sponsor / PortCo / Corporate — the tag that drives targeting, reporting and account ownership. Today it is set **only** by a data-provider import that computes Corporate as simply *"everything that is neither of the other two"* — so banks, M&A advisories and other firms we could never sell to are counted as prospects, and nobody can correct any of it by hand.
 
-### 2 · Where does it stand today?
+## Where it stands today
 
 Finding and filtering companies by type works end-to-end, fast and correct. **Maintaining** the classification does not: there is no way to fix a wrong type and refreshes overwrite silently. Untyped-at-birth for product-created companies is accepted behaviour (2026-08-11).
 
 **Status: reads work; the Corporate bucket over-counts by definition; maintenance fails silently in two places.**
 
-### 3 · What does this document deliver?
+## What this document delivers
 
 **Pass 1:** the decision strip, this summary, and the journey health map with the scenario list (confirmed — explicit go received).
 **Pass 2** (included below): backend + frontend change briefs (§3) with every change tagged decided-or-CTO, and four junior-ready fix cards (§9).
 **On demand:** ops playbook, full journeys, technical appendix (drafted in rev 3).
 
-### 4 · What will it cost?
+## What it costs
 
 Roughly **15–18 dev-days total**: quick wins ≈ 8–12 dev-days (reclassify service firms into the five new types + backfill, make type correctable, consolidate the type vocabularies, audit bulk edits); the remaining ranked debt ≈ 4–6 dev-days. Refresh-protection and on-demand-refresh work (P2, P3) was removed from scope by product on 2026-08-11; both pains stay on the register.
 
@@ -102,53 +102,82 @@ Individual edits are recorded and re-scored automatically; bulk edits re-score b
 
 Include/exclude type filtering with live counts, fast results — the read side of this flow is in good shape. *No spend needed here.*
 
+## Quick wins
+
+*What we do now — four fixes, ≈ 8–12 dev-days. Build instructions in §9.*
+
+| | Fix | Worth |
+|---|---|---|
+| **1** 🔴 `BLOCKER` | **Redefine "Corporate" = possible client.** Move banks, advisories and law firms into their own new types — Advisory Firm / Law Firm / Banks / Other — via the provider's industry data; backfill existing records. | every type-filtered list and report stops over-counting, for ~2–3 dev-days |
+| **2** 🔴 `BLOCKER` | **Make company type correctable.** No screen or control lets an admin fix a wrong type today. | trustworthy target lists and reports, for ~1–3 dev-days |
+| **3** 🟠 `CRITICAL` | **One canonical company type.** Promote the official tag (eight values after win 1); retire the legacy free-text label — gate G4. | cross-team reports finally agree, for ~3–5 dev-days |
+| **4** 🟡 `MAJOR` | **Audit bulk edits.** Bulk edits re-score but skip the record of who changed what. | every bulk action becomes traceable, for ~1–2 dev-days |
+
+## Backlog
+
+*What we are **not** doing yet — the other eight pains, ≈ 4–6 dev-days if all were taken. Nothing here is closed; each stays on the register until it is built or explicitly retired.*
+
+| | Pain | Why it waits |
+|---|---|---|
+| **P3** 🟠 | Refresh silently overwrites classification | **Descoped by product 2026-08-11.** High score, but out of scope this round — a manual fix can be re-overwritten by the next import until this lands. |
+| **P2** 🟡 | On-demand refresh disconnected | **Descoped by product 2026-08-11.** The button exists but does not reach the refresh path. |
+| **P9** 🟡 | Label list has two sources of truth | Waits on gate **G4** — no point reconciling label sources before the canonical vocabulary is chosen. |
+| **P10** 🟡 | One-sided lifecycle validation | Cheap (<0.5 day) but low blast radius; scheduled for pass 2. |
+| **P11** 🟡 | Low-confidence classifications have no review queue | Only meaningful once type is correctable (quick win 2) — a queue with no edit control is a list nobody can act on. |
+| **P7** 🔵 | Missing company shows an empty panel | Cosmetic; affects deleted or bad-id records only. |
+| **P8** 🔵 | Bad filter values dropped without error | Cosmetic; the filter still returns correct results for the values it accepts. |
+| **P12** 🔵 | Bulk "all matching" rejection offers no recovery guidance | Cosmetic; the operation fails safely, only the message is unhelpful. |
+
 ## Severity scoreboard
 
-| BLOCKER | CRITICAL | MAJOR | MINOR |
+| 🔴 BLOCKER | 🟠 CRITICAL | 🟡 MAJOR | 🔵 MINOR |
 |:---:|:---:|:---:|:---:|
 | **2** | **2** | **5** | **3** |
 
 *12 pain points found, counted per class. Untyped-at-birth (P4) accepted as intended behaviour 2026-08-11 and removed.*
 
-## Quick wins
+## Impact × effort
 
-| | Fix | Worth |
-|---|---|---|
-| **1** `BLOCKER` | **Redefine "Corporate" = possible client.** Move banks, advisories and law firms into their own new types — Advisory Firm / Law Firm / Banks / Other — via the provider's industry data; backfill existing records. | every type-filtered list and report stops over-counting, for ~2–3 dev-days |
-| **2** `BLOCKER` | **Make company type correctable.** No screen or control lets an admin fix a wrong type today. | trustworthy target lists and reports, for ~1–3 dev-days |
-| **3** `CRITICAL` | **One canonical company type.** Promote the official tag (eight values after win 1); retire the legacy free-text label — gate G4. | cross-team reports finally agree, for ~3–5 dev-days |
-| **4** `MAJOR` | **Audit bulk edits.** Bulk edits re-score but skip the record of who changed what. | every bulk action becomes traceable, for ~1–2 dev-days |
-
-## Impact × effort — all 12 pain points
-
-*Higher = worse when it happens · further left = cheaper to fix · green zone = quick-win territory (high impact, ≤2 effort)*
+*Rows = how bad it is when it happens (S5 worst) · columns = how expensive it is to fix (E1 cheapest).*
 
 | | E1 · <0.5 day | E2 | E3 · 1–3 days | E4 | E5 · >5 days |
 |---|---|---|---|---|---|
-| **S5** | | | **P1** **P3** | | |
-| **S4** | | **P2** | **P13** | | |
-| **S3** | | | P6 | | P5 |
-| **S2** | P8 P10 P12 | | P7 P11 | P9 | |
-| **S1** | | | | | |
+| **S5** | 🟩 | 🟩 | 🟩 **P1 · P3** | ⬜ | ⬜ |
+| **S4** | 🟩 | 🟩 **P2** | 🟩 **P13** | ⬜ | ⬜ |
+| **S3** | ⬜ | ⬜ | ⬜ **P6** | ⬜ | ⬜ **P5** |
+| **S2** | ⬜ **P8 · P10 · P12** | ⬜ | ⬜ **P7 · P11** | ⬜ **P9** | ⬜ |
+| **S1** | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+
+**🟩 The green zone** is the top-left corner — hurts a lot, costs little. Anything landing there is quick-win territory by default, and four pains sit in it: **P1, P3, P2, P13**.
+
+**But the quick-win bundle is P13, P1, P5, P6 — not the green four.** Two moved out and two moved in, for reasons the grid cannot see:
+
+| | Pain | Movement | Why |
+|---|---|---|---|
+| 🟩→📋 | **P3, P2** | green zone → backlog | descoped by product on 2026-08-11 — a scoring grid does not outrank a product decision |
+| ⬜→⚡ | **P5** | S3 / E5 → quick win 3 | the most expensive fix on the board, promoted because every other taxonomy fix waits behind it |
+| ⬜→⚡ | **P6** | S3 / E3 → quick win 4 | audit gaps compound — cheap now, unrecoverable later |
+
+*Read the grid as the opening argument, not the verdict.*
 
 ## Pain register
 
 | | Pain | RPN |
 |---|---|---:|
-| **P1** | No way to correct a company's type | **60** |
-| **P13** | Corporate = catch-all; banks & advisories counted as clients · **PRD GAP** | **60** |
-| **P3** | Refresh silently overwrites classification | 50 |
-| **P5** | 3+ competing type taxonomies | 36 |
-| **P6** | Bulk edits skip the audit trail | 30 |
-| **P2** | On-demand refresh disconnected | 24 |
-| **P9** | Label list has two sources of truth | 16 |
-| **P10** | One-sided lifecycle validation | 16 |
-| **P11** | Low-confidence classifications have no review queue | 16 |
-| **P7** | Missing company shows an empty panel | 12 |
-| **P8** | Bad filter values dropped without error | 10 |
-| **P12** | Bulk "all matching" rejection offers no recovery guidance | 8 |
+| **P1** 🔴 | No way to correct a company's type | **60** |
+| **P13** 🔴 | Corporate = catch-all; banks & advisories counted as clients · **PRD GAP** | **60** |
+| **P3** 🟠 | Refresh silently overwrites classification | 50 |
+| **P5** 🟠 | 3+ competing type taxonomies | 36 |
+| **P6** 🟡 | Bulk edits skip the audit trail | 30 |
+| **P2** 🟡 | On-demand refresh disconnected | 24 |
+| **P9** 🟡 | Label list has two sources of truth | 16 |
+| **P10** 🟡 | One-sided lifecycle validation | 16 |
+| **P11** 🟡 | Low-confidence classifications have no review queue | 16 |
+| **P7** 🔵 | Missing company shows an empty panel | 12 |
+| **P8** 🔵 | Bad filter values dropped without error | 10 |
+| **P12** 🔵 | Bulk "all matching" rejection offers no recovery guidance | 8 |
 
-## CTO gate preview
+## Open gates
 
 *Open gates only (G1 accepted in rev 4 · G2 retired · G3 withdrawn — untyped-at-birth accepted). REVERSIBLE defaults execute on silence; ONE-WAY gates wait for §3.*
 
@@ -165,21 +194,23 @@ Include/exclude type filtering with live counts, fast results — the read side 
 
 > **Takeaway:** the Corporate bucket lies from step 1 — banks and advisories sit in it by definition — and the moment someone tries to correct or protect a type, the journey dead-ends or fails without telling anyone.
 
+## The seven steps
+
 | Step | What happens | Status | Pains |
 |---|---|---|---|
-| **1** Find companies by type | Filtering is fast and exact — but the Corporate bucket itself over-includes: banks and advisories sit in the client list. | `DEGRADED` | P13 · P8 |
-| **2** Check one company | Open the panel; read type badges, parent and sponsor links. | `DEGRADED` | P7 |
-| **3** Fix a wrong type | While reviewing, the steward spots a mis-tagged firm — there is nowhere to correct it; the bad tag stays. | **`SILENT-FAIL`** | P1 |
-| **4** Refresh from the provider | Scheduled refreshes rewrite every type value with no warning; the manual refresh button never made it onto the page. | **`SILENT-FAIL`** | P3 · P2 |
-| **5** A new company arrives | A sign-up creates a company with no type — accepted behaviour (2026-08-11); it gains a type on the next provider import. | `OK` | — |
-| **6** Bulk tidy-up | Admins segment with buckets/labels instead; edits apply but leave no record of who changed what. | `DEGRADED` | P6 · P9 · P12 |
-| **7** Auto-classify & report | The automated classifier tags companies, but low-confidence results hide in logs and four "type" vocabularies disagree in reports. | `DEGRADED` | P5 · P11 |
+| **1** Find companies by type | Filtering is fast and exact — but the Corporate bucket itself over-includes: banks and advisories sit in the client list. | 🟡 `DEGRADED` | P13 · P8 |
+| **2** Check one company | Open the panel; read type badges, parent and sponsor links. | 🟡 `DEGRADED` | P7 |
+| **3** Fix a wrong type | While reviewing, the steward spots a mis-tagged firm — there is nowhere to correct it; the bad tag stays. | 🔴 **`SILENT-FAIL`** | P1 |
+| **4** Refresh from the provider | Scheduled refreshes rewrite every type value with no warning; the manual refresh button never made it onto the page. | 🔴 **`SILENT-FAIL`** | P3 · P2 |
+| **5** A new company arrives | A sign-up creates a company with no type — accepted behaviour (2026-08-11); it gains a type on the next provider import. | 🟢 `OK` | — |
+| **6** Bulk tidy-up | Admins segment with buckets/labels instead; edits apply but leave no record of who changed what. | 🟡 `DEGRADED` | P6 · P9 · P12 |
+| **7** Auto-classify & report | The automated classifier tags companies, but low-confidence results hide in logs and four "type" vocabularies disagree in reports. | 🟡 `DEGRADED` | P5 · P11 |
 
 *Steps 1→7 left to right as the journey runs. P13 is created by step 4's re-derivation but felt at step 1; P10 (one-sided validation of the lifecycle field) sits beside the flow on step 2's edit panel.*
 
-## Scenario list `CONFIRMED`
+## Scenarios
 
-*Confirmed in rev 4; CPO may still trim before §5 expansion. One happy path + six variants the code can actually produce, worst first by provisional score.*
+`CONFIRMED` *in rev 4; CPO may still trim before §5 expansion. One happy path + six variants the code can actually produce, worst first by provisional score.*
 
 | # | Scenario | Trigger | Persona | Σ RPN |
 |---|---|---|---|---:|
@@ -323,15 +354,15 @@ mutation bulkUpdateMmCompanyV2Fields
 
 ---
 
-# 9 · Quick-win shortlist — fix cards
+# 9 · Build instructions
 
-**For: junior/mid devs.** *Executable without prior knowledge of the flow. Ordered by RPN, then lowest effort. File paths are exact; acceptance is Gherkin.*
+**For: junior/mid devs.** *One card per quick win (§1). Executable without prior knowledge of the flow. Ordered by RPN, then lowest effort. File paths are exact; acceptance is Gherkin.*
 
 > **Takeaway:** four cards, ≈ 8–12 dev-days total; card 1 waits on G5's mapping (48h default), card 3 on the G4 answer.
 
 ## 1 · Reclassify non-clients into the new types
 
-`P13 · RPN 60 · BLOCKER · PRD GAP` &nbsp;·&nbsp; `E3 ≈ 2–3 days`
+🔴 `P13 · RPN 60 · BLOCKER · PRD GAP` &nbsp;·&nbsp; `E3 ≈ 2–3 days`
 
 **PM:** Banks, advisories and law firms leave the Corporate prospect bucket and become their own filterable types (Reach 3 × Impact 5, Confidence High on the mechanism) — the definition the business ruled on. Waits only on the G5 mapping (48h default).
 
@@ -361,7 +392,7 @@ mutation bulkUpdateMmCompanyV2Fields
 
 ## 2 · Make company type editable
 
-`P1 · RPN 60 · BLOCKER` &nbsp;·&nbsp; `E2 ≈ 1–3 days`
+🔴 `P1 · RPN 60 · BLOCKER` &nbsp;·&nbsp; `E2 ≈ 1–3 days`
 
 **PM:** Reaches every data steward and everyone downstream of their lists (Reach 3 × Impact 5, Confidence High) for effort 2 — the highest-return change in the audit.
 
@@ -388,7 +419,7 @@ mutation bulkUpdateMmCompanyV2Fields
 
 ## 3 · Consolidate the type vocabularies
 
-`P5 · RPN 36 · CRITICAL` &nbsp;·&nbsp; `E4 ≈ 3–5 days`
+🟠 `P5 · RPN 36 · CRITICAL` &nbsp;·&nbsp; `E4 ≈ 3–5 days`
 
 **PM:** One canonical "company type" ends hand-reconciled cross-team reports (Reach 3 × Impact 3, Confidence Med). Waits on G4 — the one ONE-WAY gate; the auditor recommends promoting the official tag and retiring the legacy text label.
 
@@ -414,7 +445,7 @@ mutation bulkUpdateMmCompanyV2Fields
 
 ## 4 · Audit bulk edits
 
-`P6 · RPN 30 · MAJOR` &nbsp;·&nbsp; `E2 ≈ 1–2 days`
+🟡 `P6 · RPN 30 · MAJOR` &nbsp;·&nbsp; `E2 ≈ 1–2 days`
 
 **PM:** Closes the *"who changed this?"* gap for every bulk action (Reach 2 × Impact 3, Confidence High) for effort 2.
 
