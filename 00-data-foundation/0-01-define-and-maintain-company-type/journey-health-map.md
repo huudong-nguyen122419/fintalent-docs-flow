@@ -110,3 +110,15 @@ _Answers the COO's [§0](decision-strip.md) row by looking, not memory. Support 
 | ----------------------------------------------------------------- | -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | _"My Corporate list is full of banks and M\&A advisories."_ <mark style="color:$danger;background-color:$danger;">P13</mark> | Anyone targeting or reporting from the Corporate filter (SDRs, leadership) | Cross-check each company's industry (shown on the company panel; industry filters exist) and prune by hand. |
 | _"This company has the wrong type and I can't change it."_ <mark style="color:$danger;background-color:$danger;">P1</mark>   | Data stewards reviewing records                                            | None in the product — note it elsewhere; the wrong tag stays.                                               |
+## HTMLTESTMARKER
+
+<div style="border-top:3px solid #b45309;background:#fff;padding:12px" data-probe="divstyle">
+<strong>DIVPROBE</strong> body text here
+</div>
+
+<span style="background:#ffe8cc;padding:2px 6px;border-radius:4px" data-probe="spanstyle">SPANPROBE</span>
+
+<p style="border-left:4px solid green" data-probe="pstyle">PPROBE</p>
+
+<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>CARDPROBE</strong></td><td>card description</td></tr></tbody></table>
+
