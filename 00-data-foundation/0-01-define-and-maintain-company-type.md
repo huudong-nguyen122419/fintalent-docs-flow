@@ -108,14 +108,14 @@ _Four fixes, ≈ 8–12 dev-days. Build instructions in §9. The eight pains out
 
 |                     | Fix                                                                                                                                                                                                                 | Worth                                                                       |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| **1** 🔴 `BLOCKER`  | **Redefine "Corporate" = possible client.** Move banks, advisories and law firms into their own new types — Advisory Firm / Law Firm / Banks / Other — via the provider's industry data; backfill existing records. | every type-filtered list and report stops over-counting, for \~2–3 dev-days |
-| **2** 🔴 `BLOCKER`  | **Make company type correctable.** No screen or control lets an admin fix a wrong type today.                                                                                                                       | trustworthy target lists and reports, for \~1–3 dev-days                    |
-| **3** 🟠 `CRITICAL` | **One canonical company type.** Promote the official tag (eight values after win 1); retire the legacy free-text label — gate G4.                                                                                   | cross-team reports finally agree, for \~3–5 dev-days                        |
-| **4** 🟡 `MAJOR`    | **Audit bulk edits.** Bulk edits re-score but skip the record of who changed what.                                                                                                                                  | every bulk action becomes traceable, for \~1–2 dev-days                     |
+| **1** <mark style="color:$danger;">**BLOCKER**</mark> | **Redefine "Corporate" = possible client.** Move banks, advisories and law firms into their own new types — Advisory Firm / Law Firm / Banks / Other — via the provider's industry data; backfill existing records. | every type-filtered list and report stops over-counting, for \~2–3 dev-days |
+| **2** <mark style="color:$danger;">**BLOCKER**</mark> | **Make company type correctable.** No screen or control lets an admin fix a wrong type today.                                                                                                                       | trustworthy target lists and reports, for \~1–3 dev-days                    |
+| **3** <mark style="color:orange;">**CRITICAL**</mark> | **One canonical company type.** Promote the official tag (eight values after win 1); retire the legacy free-text label — gate G4.                                                                                   | cross-team reports finally agree, for \~3–5 dev-days                        |
+| **4** <mark style="color:$warning;">**MAJOR**</mark> | **Audit bulk edits.** Bulk edits re-score but skip the record of who changed what.                                                                                                                                  | every bulk action becomes traceable, for \~1–2 dev-days                     |
 
 ### Severity scoreboard
 
-| 🔴 BLOCKER | 🟠 CRITICAL | 🟡 MAJOR | 🔵 MINOR |
+| <mark style="color:$danger;">BLOCKER</mark> | <mark style="color:orange;">CRITICAL</mark> | <mark style="color:$warning;">MAJOR</mark> | <mark style="color:$info;">MINOR</mark> |
 | :--------: | :---------: | :------: | :------: |
 |    **2**   |    **2**    |   **5**  |   **3**  |
 
@@ -125,23 +125,23 @@ _12 pain points found, counted per class. Untyped-at-birth (P4) accepted as inte
 
 _Rows = how bad it is when it happens (S5 worst) · columns = how expensive it is to fix (E1 cheapest)._
 
-|        | E1 · <0.5 day        | E2        | E3 · 1–3 days  | E4       | E5 · >5 days |
-| ------ | -------------------- | --------- | -------------- | -------- | ------------ |
-| **S5** | 🟩                   | 🟩        | 🟩 **P1 · P3** | ⬜        | ⬜            |
-| **S4** | 🟩                   | 🟩 **P2** | 🟩 **P13**     | ⬜        | ⬜            |
-| **S3** | ⬜                    | ⬜         | ⬜ **P6**       | ⬜        | ⬜ **P5**     |
-| **S2** | ⬜ **P8 · P10 · P12** | ⬜         | ⬜ **P7 · P11** | ⬜ **P9** | ⬜            |
-| **S1** | ⬜                    | ⬜         | ⬜              | ⬜        | ⬜            |
+|        | E1 · <0.5 day | E2 | E3 · 1–3 days | E4 | E5 · >5 days |
+| ------ | ------------- | -- | ------------- | -- | ------------ |
+| **S5** | <mark style="background-color:$success;">　</mark> | <mark style="background-color:$success;">　</mark> | <mark style="background-color:$success;">**P1 · P3**</mark> | | |
+| **S4** | <mark style="background-color:$success;">　</mark> | <mark style="background-color:$success;">**P2**</mark> | <mark style="background-color:$success;">**P13**</mark> | | |
+| **S3** | | | **P6** | | **P5** |
+| **S2** | **P8 · P10 · P12** | | **P7 · P11** | **P9** | |
+| **S1** | | | | | |
 
-**🟩 The green zone** is the top-left corner — hurts a lot, costs little. Anything landing there is quick-win territory by default, and four pains sit in it: **P1, P3, P2, P13**.
+**The green zone** is the top-left corner — hurts a lot, costs little. Anything landing there is quick-win territory by default, and four pains sit in it: **P1, P3, P2, P13**.
 
 **But the quick-win bundle is P13, P1, P5, P6 — not the green four.** Two moved out and two moved in, for reasons the grid cannot see:
 
-|      | Pain       | Movement                  | Why                                                                                                                     |
-| ---- | ---------- | ------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| 🟩→⬜ | **P3, P2** | green zone → out of scope | descoped by product on 2026-08-11 — a scoring grid does not outrank a product decision; both stay on the register below |
-| ⬜→⚡  | **P5**     | S3 / E5 → quick win 3     | the most expensive fix on the board, promoted because every other taxonomy fix waits behind it                          |
-| ⬜→⚡  | **P6**     | S3 / E3 → quick win 4     | audit gaps compound — cheap now, unrecoverable later                                                                    |
+| Pain | Movement | Why |
+| ---- | -------- | --- |
+| **P3, P2** | <mark style="background-color:$success;">green zone</mark> → out of scope | descoped by product on 2026-08-11 — a scoring grid does not outrank a product decision; both stay on the register below |
+| **P5** | S3 / E5 → <mark style="color:orange;">quick win 3</mark> | the most expensive fix on the board, promoted because every other taxonomy fix waits behind it |
+| **P6** | S3 / E3 → <mark style="color:$warning;">quick win 4</mark> | audit gaps compound — cheap now, unrecoverable later |
 
 _Read the grid as the opening argument, not the verdict._
 
@@ -149,18 +149,18 @@ _Read the grid as the opening argument, not the verdict._
 
 |            | Pain                                                                       |    RPN |
 | ---------- | -------------------------------------------------------------------------- | -----: |
-| **P1** 🔴  | No way to correct a company's type                                         | **60** |
-| **P13** 🔴 | Corporate = catch-all; banks & advisories counted as clients · **PRD GAP** | **60** |
-| **P3** 🟠  | Refresh silently overwrites classification                                 |     50 |
-| **P5** 🟠  | 3+ competing type taxonomies                                               |     36 |
-| **P6** 🟡  | Bulk edits skip the audit trail                                            |     30 |
-| **P2** 🟡  | On-demand refresh disconnected                                             |     24 |
-| **P9** 🟡  | Label list has two sources of truth                                        |     16 |
-| **P10** 🟡 | One-sided lifecycle validation                                             |     16 |
-| **P11** 🟡 | Low-confidence classifications have no review queue                        |     16 |
-| **P7** 🔵  | Missing company shows an empty panel                                       |     12 |
-| **P8** 🔵  | Bad filter values dropped without error                                    |     10 |
-| **P12** 🔵 | Bulk "all matching" rejection offers no recovery guidance                  |      8 |
+| <mark style="color:$danger;">**P1**</mark> | No way to correct a company's type                                         | **60** |
+| <mark style="color:$danger;">**P13**</mark> | Corporate = catch-all; banks & advisories counted as clients · **PRD GAP** | **60** |
+| <mark style="color:orange;">**P3**</mark> | Refresh silently overwrites classification                                 |     50 |
+| <mark style="color:orange;">**P5**</mark> | 3+ competing type taxonomies                                               |     36 |
+| <mark style="color:$warning;">**P6**</mark> | Bulk edits skip the audit trail                                            |     30 |
+| <mark style="color:$warning;">**P2**</mark> | On-demand refresh disconnected                                             |     24 |
+| <mark style="color:$warning;">**P9**</mark> | Label list has two sources of truth                                        |     16 |
+| <mark style="color:$warning;">**P10**</mark> | One-sided lifecycle validation                                             |     16 |
+| <mark style="color:$warning;">**P11**</mark> | Low-confidence classifications have no review queue                        |     16 |
+| <mark style="color:$info;">**P7**</mark> | Missing company shows an empty panel                                       |     12 |
+| <mark style="color:$info;">**P8**</mark> | Bad filter values dropped without error                                    |     10 |
+| <mark style="color:$info;">**P12**</mark> | Bulk "all matching" rejection offers no recovery guidance                  |      8 |
 
 ### Open gates
 
@@ -183,13 +183,13 @@ _Open gates only (G1 accepted in rev 4 · G2 retired · G3 withdrawn — untyped
 
 | Step                            | What happens                                                                                                                       | Status               | Pains         |
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | -------------------- | ------------- |
-| **1** Find companies by type    | Filtering is fast and exact — but the Corporate bucket itself over-includes: banks and advisories sit in the client list.          | 🟡 `DEGRADED`        | P13 · P8      |
-| **2** Check one company         | Open the panel; read type badges, parent and sponsor links.                                                                        | 🟡 `DEGRADED`        | P7            |
-| **3** Fix a wrong type          | While reviewing, the steward spots a mis-tagged firm — there is nowhere to correct it; the bad tag stays.                          | 🔴 **`SILENT-FAIL`** | P1            |
-| **4** Refresh from the provider | Scheduled refreshes rewrite every type value with no warning; the manual refresh button never made it onto the page.               | 🔴 **`SILENT-FAIL`** | P3 · P2       |
-| **5** A new company arrives     | A sign-up creates a company with no type — accepted behaviour (2026-08-11); it gains a type on the next provider import.           | 🟢 `OK`              | —             |
-| **6** Bulk tidy-up              | Admins segment with buckets/labels instead; edits apply but leave no record of who changed what.                                   | 🟡 `DEGRADED`        | P6 · P9 · P12 |
-| **7** Auto-classify & report    | The automated classifier tags companies, but low-confidence results hide in logs and four "type" vocabularies disagree in reports. | 🟡 `DEGRADED`        | P5 · P11      |
+| **1** Find companies by type    | Filtering is fast and exact — but the Corporate bucket itself over-includes: banks and advisories sit in the client list.          | <mark style="color:$warning;">DEGRADED</mark>        | P13 · P8      |
+| **2** Check one company         | Open the panel; read type badges, parent and sponsor links.                                                                        | <mark style="color:$warning;">DEGRADED</mark>        | P7            |
+| **3** Fix a wrong type          | While reviewing, the steward spots a mis-tagged firm — there is nowhere to correct it; the bad tag stays.                          | <mark style="color:$danger;">**SILENT-FAIL**</mark> | P1            |
+| **4** Refresh from the provider | Scheduled refreshes rewrite every type value with no warning; the manual refresh button never made it onto the page.               | <mark style="color:$danger;">**SILENT-FAIL**</mark> | P3 · P2       |
+| **5** A new company arrives     | A sign-up creates a company with no type — accepted behaviour (2026-08-11); it gains a type on the next provider import.           | <mark style="color:$success;">OK</mark>              | —             |
+| **6** Bulk tidy-up              | Admins segment with buckets/labels instead; edits apply but leave no record of who changed what.                                   | <mark style="color:$warning;">DEGRADED</mark>        | P6 · P9 · P12 |
+| **7** Auto-classify & report    | The automated classifier tags companies, but low-confidence results hide in logs and four "type" vocabularies disagree in reports. | <mark style="color:$warning;">DEGRADED</mark>        | P5 · P11      |
 
 _Steps 1→7 left to right as the journey runs. P13 is created by step 4's re-derivation but felt at step 1; P10 (one-sided validation of the lifecycle field) sits beside the flow on step 2's edit panel._
 
@@ -347,7 +347,7 @@ mutation bulkUpdateMmCompanyV2Fields
 
 ### 1 · Reclassify non-clients into the new types
 
-🔴 `P13 · RPN 60 · BLOCKER · PRD GAP`  ·  `E3 ≈ 2–3 days`
+<mark style="color:$danger;">`P13 · RPN 60 · BLOCKER · PRD GAP`</mark>  ·  `E3 ≈ 2–3 days`
 
 **PM:** Banks, advisories and law firms leave the Corporate prospect bucket and become their own filterable types (Reach 3 × Impact 5, Confidence High on the mechanism) — the definition the business ruled on. Waits only on the G5 mapping (48h default).
 
@@ -377,7 +377,7 @@ mutation bulkUpdateMmCompanyV2Fields
 
 ### 2 · Make company type editable
 
-🔴 `P1 · RPN 60 · BLOCKER`  ·  `E2 ≈ 1–3 days`
+<mark style="color:$danger;">`P1 · RPN 60 · BLOCKER`</mark>  ·  `E2 ≈ 1–3 days`
 
 **PM:** Reaches every data steward and everyone downstream of their lists (Reach 3 × Impact 5, Confidence High) for effort 2 — the highest-return change in the audit.
 
@@ -404,7 +404,7 @@ mutation bulkUpdateMmCompanyV2Fields
 
 ### 3 · Consolidate the type vocabularies
 
-🟠 `P5 · RPN 36 · CRITICAL`  ·  `E4 ≈ 3–5 days`
+<mark style="color:orange;">`P5 · RPN 36 · CRITICAL`</mark>  ·  `E4 ≈ 3–5 days`
 
 **PM:** One canonical "company type" ends hand-reconciled cross-team reports (Reach 3 × Impact 3, Confidence Med). Waits on G4 — the one ONE-WAY gate; the auditor recommends promoting the official tag and retiring the legacy text label.
 
@@ -430,7 +430,7 @@ mutation bulkUpdateMmCompanyV2Fields
 
 ### 4 · Audit bulk edits
 
-🟡 `P6 · RPN 30 · MAJOR`  ·  `E2 ≈ 1–2 days`
+<mark style="color:$warning;">`P6 · RPN 30 · MAJOR`</mark>  ·  `E2 ≈ 1–2 days`
 
 **PM:** Closes the _"who changed this?"_ gap for every bulk action (Reach 2 × Impact 3, Confidence High) for effort 2.
 
