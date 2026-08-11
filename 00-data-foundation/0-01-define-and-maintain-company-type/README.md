@@ -12,8 +12,7 @@ Rev 5 adds the product ruling of 2026-08-10 — **Corporate = a Mergermarket-sou
 
 | Section | For | What it holds |
 |---|---|---|
-| [Who does it](who-does-it.md) | — | Owner today and in the mid-term model. |
-| [Scope](scope.md) | — | What the flow covers, where it starts, what counts as success. |
+| [Who does it & scope](who-does-it-and-scope.md) | — | Owner today and in the mid-term model; what the flow covers, where it starts, what counts as success. |
 | [0 · Decision strip](decision-strip.md) | all stakeholders | One yes/no question each. Silence executes the default after 48h. |
 | [1 · Executive summary](executive-summary.md) | CEO | The problem, the five findings, quick wins, severity and the impact grid. |
 | [2 · Journey health map](journey-health-map.md) | COO + CPO | The seven steps as a person walks them, plus scenarios and the symptom check. |

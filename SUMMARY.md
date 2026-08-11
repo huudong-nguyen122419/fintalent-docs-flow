@@ -4,8 +4,7 @@
 
 * [0. Data Foundation](00-data-foundation/README.md)
   * [0.01 · Define and maintain company type](00-data-foundation/0-01-define-and-maintain-company-type/README.md)
-    * [Who does it](00-data-foundation/0-01-define-and-maintain-company-type/who-does-it.md)
-    * [Scope](00-data-foundation/0-01-define-and-maintain-company-type/scope.md)
+    * [Who does it & scope](00-data-foundation/0-01-define-and-maintain-company-type/who-does-it-and-scope.md)
     * [0 · Decision strip](00-data-foundation/0-01-define-and-maintain-company-type/decision-strip.md)
     * [1 · Executive summary](00-data-foundation/0-01-define-and-maintain-company-type/executive-summary.md)
     * [2 · Journey health map](00-data-foundation/0-01-define-and-maintain-company-type/journey-health-map.md)
