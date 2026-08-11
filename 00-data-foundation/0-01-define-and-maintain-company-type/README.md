@@ -12,11 +12,4 @@ Rev 5 adds the product ruling of 2026-08-10 — **Corporate = a Mergermarket-sou
 
 ## On this flow
 
-| Section | For | What it holds |
-|---|---|---|
-| [Who does it & scope](who-does-it-and-scope.md) | — | Owner today and in the mid-term model; what the flow covers, where it starts, what counts as success. |
-| [0 · Decision strip](decision-strip.md) | all stakeholders | One yes/no question each. Silence executes the default after 48h. |
-| [1 · Executive summary](executive-summary.md) | CEO | The problem, the five findings, quick wins, severity and the impact grid. |
-| [2 · Journey health map](journey-health-map.md) | COO + CPO | The seven steps as a person walks them, plus scenarios and the symptom check. |
-| [3 · Change briefs](change-briefs.md) | CTO | Backend and frontend contracts, decision gates, completion checklists. |
-| [9 · Build instructions](build-instructions.md) | junior/mid devs | Four fix cards with exact file paths and Gherkin acceptance. |
+<table><thead><tr><th width="227">Section</th><th width="168">For</th><th>What it holds</th></tr></thead><tbody><tr><td><a href="who-does-it-and-scope.md">Who does it &#x26; scope</a></td><td>—</td><td>Owner today and in the mid-term model; what the flow covers, where it starts, what counts as success.</td></tr><tr><td><a href="decision-strip.md">0 · Decision strip</a></td><td>all stakeholders</td><td>One yes/no question each. Silence executes the default after 48h.</td></tr><tr><td><a href="executive-summary.md">1 · Executive summary</a></td><td>CEO</td><td>The problem, the five findings, quick wins, severity and the impact grid.</td></tr><tr><td><a href="journey-health-map.md">2 · Journey health map</a></td><td>COO + CPO</td><td>The seven steps as a person walks them, plus scenarios and the symptom check.</td></tr><tr><td><a href="change-briefs.md">3 · Change briefs</a></td><td>CTO</td><td>Backend and frontend contracts, decision gates, completion checklists.</td></tr><tr><td><a href="build-instructions.md">9 · Build instructions</a></td><td>junior/mid devs</td><td>Four fix cards with exact file paths and Gherkin acceptance.</td></tr></tbody></table>
