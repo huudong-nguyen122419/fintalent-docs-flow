@@ -4,7 +4,9 @@
 
 **For: CEO.** _Business language, zero code terms, zero raw scores in prose._
 
-> **Takeaway:** finding companies by type works, but **"Corporate" itself is mis-defined** — it sweeps in banks and advisories — and **nobody can fix a wrong type**; four quick wins (≈ 10 dev-days) close the gaps.
+{% hint style="danger" %}
+**Takeaway:** finding companies by type works, but **"Corporate" itself is mis-defined** — it sweeps in banks and advisories — and **nobody can fix a wrong type**; four quick wins (≈ 10 dev-days) close the gaps.
+{% endhint %}
 
 ## The problem
 

@@ -4,7 +4,9 @@
 
 **For: junior/mid devs.** _One card per quick win ([§1](executive-summary.md)). Executable without prior knowledge of the flow. Ordered by RPN, then lowest effort. File paths are exact; acceptance is Gherkin._
 
-> **Takeaway:** four cards, ≈ 8–12 dev-days total; card 1 waits on G5's mapping (48h default), card 3 on the G4 answer.
+{% hint style="info" %}
+**Takeaway:** four cards, ≈ 8–12 dev-days total; card 1 waits on G5's mapping (48h default), card 3 on the G4 answer.
+{% endhint %}
 
 ## 1 · Reclassify non-clients into the new types
 

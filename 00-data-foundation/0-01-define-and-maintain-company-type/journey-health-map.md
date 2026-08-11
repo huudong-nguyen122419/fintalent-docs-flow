@@ -4,7 +4,9 @@
 
 **For: COO + CPO.** _The flow as a person walks it. Plain words — read this aloud in standup._
 
-> **Takeaway:** the Corporate bucket lies from step 1 — banks and advisories sit in it by definition — and the moment someone tries to correct or protect a type, the journey dead-ends or fails without telling anyone.
+{% hint style="danger" %}
+**Takeaway:** the Corporate bucket lies from step 1 — banks and advisories sit in it by definition — and the moment someone tries to correct or protect a type, the journey dead-ends or fails without telling anyone.
+{% endhint %}
 
 ## The seven steps
 

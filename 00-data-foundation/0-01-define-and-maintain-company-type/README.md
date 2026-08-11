@@ -2,7 +2,9 @@
 
 > **0. Data Foundation** · **Lean flow audit · pass 1 + 2 · rev 5**
 
-> **Verdict:** reads work · Corporate over-tags non-clients · 2 silent failures · quick wins ≈ 10 days
+{% hint style="warning" %}
+**Verdict:** reads work · Corporate over-tags non-clients · 2 silent failures · quick wins ≈ 10 days
+{% endhint %}
 
 Sponsor / PortCo / Corporate classification on company records — plus the five service-firm types added 2026-08-11 (Advisory Firm, Law Firm, Banks, Accounting Firm, Other) — how it is set, shown, filtered, refreshed and (not) corrected. Derived from the connected repos (branch `develop`, read 2026-08-10); dispute any derived value below and it is corrected before pass 2.
 

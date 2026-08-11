@@ -4,7 +4,9 @@
 
 **For: CTO.** _Change contracts, not implementations. Every change is tagged <mark style="color:$success;background-color:$success;">DECIDED</mark> or <mark style="color:$warning;background-color:$warning;">NEEDS CTO</mark> and traced to a pain ID. JSON samples live only here. Exact file evidence: technical appendix (rev 3)._
 
-> **Takeaway:** four changes make company type mean the right thing, writable, audited and single-vocabulary; one call remains yours — the taxonomy end-state (G4), now gating quick-win card 3; the industry → type mapping (G5) defaults in 48h.
+{% hint style="info" %}
+**Takeaway:** four changes make company type mean the right thing, writable, audited and single-vocabulary; one call remains yours — the taxonomy end-state (G4), now gating quick-win card 3; the industry → type mapping (G5) defaults in 48h.
+{% endhint %}
 
 ## 3A · Backend change brief
 
@@ -24,6 +26,8 @@
 
 Accepts all type values — the existing three plus Advisory Firm / Law Firm / Banks / Accounting Firm / Other (`true` / `false` / `null-to-clear`) — and writes the audit record — resolves P1. With refresh protection descoped (P3), the next provider refresh may overwrite a manual value. Back-compat: additive input fields, non-breaking, no version bump.
 
+{% columns %}
+{% column %}
 ```graphql
 # request
 mutation updateMmCompanyV2Fields
@@ -32,7 +36,9 @@ mutation updateMmCompanyV2Fields
     "isSponsor": true,
     "isCorporate": false } }
 ```
+{% endcolumn %}
 
+{% column %}
 ```json
 // success
 { "data": { "updateMmCompanyV2Fields": {
@@ -43,18 +49,24 @@ mutation updateMmCompanyV2Fields
 { "errors": [ { "message": "isSponsor must be a boolean",
     "extensions": { "code": "BAD_USER_INPUT" } } ] }
 ```
+{% endcolumn %}
+{% endcolumns %}
 
 **Bulk edit companies** · existing operation, widened + audited · <mark style="color:$success;background-color:$success;">DECIDED</mark>
 
 Gains the same three type fields and emits the per-company audit records the single edit already produces — resolves P6, enables bulk type assignment. The count-guard rejection stays; its message gains recovery guidance (P12, copy in 3B-c). Back-compat: additive, non-breaking.
 
+{% columns %}
+{% column %}
 ```graphql
 # request
 mutation bulkUpdateMmCompanyV2Fields
 { "condition": { "ids": ["663d…9f1", "663d…a02"] },
   "input": { "isCorporate": true } }
 ```
+{% endcolumn %}
 
+{% column %}
 ```json
 // success
 { "data": { "bulkUpdateMmCompanyV2Fields": true } }
@@ -63,6 +75,8 @@ mutation bulkUpdateMmCompanyV2Fields
 { "errors": [ { "message": "count mismatch",
     "extensions": { "code": "MM_COMPANY_DIFFERENT_COUNT_QUANTITY" } } ] }
 ```
+{% endcolumn %}
+{% endcolumns %}
 
 ### 3A-D · Decision gates
 
