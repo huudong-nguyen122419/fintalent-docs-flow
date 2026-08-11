@@ -1,6 +1,6 @@
 # 1 · Executive summary
 
-> part of [0.01 · Define & maintain company type](README.md)
+> part of [0.01 · Define & maintain company type](./)
 
 **For: CEO.** _Business language, zero code terms, zero raw scores in prose._
 
@@ -60,20 +60,15 @@ Include/exclude type filtering with live counts, fast results — the read side 
 
 ## Quick wins
 
-_Four fixes, ≈ 8–12 dev-days. Build instructions in [§9](build-instructions.md). The eight pains outside this bundle stay on the register below._
+_Four fixes, ≈ 8–12 dev-days. Build instructions in_ [_§9_](build-instructions.md)_. The eight pains outside this bundle stay on the register below._
 
-|                                                       | Fix                                                                                                                                                                                                                 | Worth                                                                       |
-| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| **1** <mark style="color:$danger;background-color:$danger;">**BLOCKER**</mark> | **Redefine "Corporate" = possible client.** Move banks, advisories and law firms into their own new types — Advisory Firm / Law Firm / Banks / Other — via the provider's industry data; backfill existing records. | every type-filtered list and report stops over-counting, for \~2–3 dev-days |
-| **2** <mark style="color:$danger;background-color:$danger;">**BLOCKER**</mark> | **Make company type correctable.** No screen or control lets an admin fix a wrong type today.                                                                                                                       | trustworthy target lists and reports, for \~1–3 dev-days                    |
-| **3** <mark style="color:orange;background-color:orange;">**CRITICAL**</mark> | **One canonical company type.** Promote the official tag (eight values after win 1); retire the legacy free-text label — gate G4.                                                                                   | cross-team reports finally agree, for \~3–5 dev-days                        |
-| **4** <mark style="color:$warning;background-color:$warning;">**MAJOR**</mark>  | **Audit bulk edits.** Bulk edits re-score but skip the record of who changed what.                                                                                                                                  | every bulk action becomes traceable, for \~1–2 dev-days                     |
+<table><thead><tr><th width="139"></th><th width="327">Fix</th><th>Worth</th></tr></thead><tbody><tr><td><mark style="color:$success;"><strong><code>QUICK WIN 1</code></strong></mark><br><mark style="color:$danger;background-color:$danger;"><strong>BLOCKER</strong></mark></td><td><strong>Redefine "Corporate" = possible client.</strong> Move banks, advisories and law firms into their own new types — Advisory Firm / Law Firm / Banks / Other — via the provider's industry data; backfill existing records.</td><td>every type-filtered list and report stops over-counting, for ~2–3 dev-days</td></tr><tr><td><mark style="color:$success;"><strong><code>QUICK WIN 2</code></strong></mark><br><mark style="color:$danger;background-color:$danger;"><strong>BLOCKER</strong></mark></td><td><strong>Make company type correctable.</strong> No screen or control lets an admin fix a wrong type today.</td><td>trustworthy target lists and reports, for ~1–3 dev-days</td></tr><tr><td><mark style="color:$success;"><strong><code>QUICK WIN 3</code></strong></mark><br><mark style="color:orange;background-color:orange;"><strong>CRITICAL</strong></mark></td><td><strong>One canonical company type.</strong> Promote the official tag (eight values after win 1); retire the legacy free-text label — gate G4.</td><td>cross-team reports finally agree, for ~3–5 dev-days</td></tr><tr><td><mark style="color:$success;"><strong><code>QUICK WIN 4</code></strong></mark><br><mark style="color:$warning;background-color:$warning;"><strong>MAJOR</strong></mark></td><td><strong>Audit bulk edits.</strong> Bulk edits re-score but skip the record of who changed what.</td><td>every bulk action becomes traceable, for ~1–2 dev-days</td></tr></tbody></table>
 
 ## Severity scoreboard
 
 | <mark style="color:$danger;background-color:$danger;">BLOCKER</mark> | <mark style="color:orange;background-color:orange;">CRITICAL</mark> | <mark style="color:$warning;background-color:$warning;">MAJOR</mark> | <mark style="color:$info;background-color:$info;">MINOR</mark> |
-| :-----------------------------------------: | :-----------------------------------------: | :----------------------------------------: | :-------------------------------------: |
-|                    **2**                    |                    **2**                    |                    **5**                   |                  **3**                  |
+| :------------------------------------------------------------------: | :-----------------------------------------------------------------: | :------------------------------------------------------------------: | :------------------------------------------------------------: |
+|                                 **2**                                |                                **2**                                |                                 **5**                                |                              **3**                             |
 
 _12 pain points found, counted per class. Untyped-at-birth (P4) accepted as intended behaviour 2026-08-11 and removed._
 
@@ -81,10 +76,29 @@ _12 pain points found, counted per class. Untyped-at-birth (P4) accepted as inte
 
 _Rows = how bad it is when it happens (S5 worst) · columns = how expensive it is to fix (E1 cheapest)._
 
+```mermaid
+block-beta
+  columns 6
+  space:1 h1["E1 · <0.5 day"] h2["E2"] h3["E3 · 1–3 days"] h4["E4"] h5["E5 · >5 days"]
+  r5["S5"] z51[" "] z52["P1   P3"] c53[" "] c54[" "] c55[" "]
+  r4["S4"] z41["P2"] z42["P13"] c43[" "] c44[" "] c45[" "]
+  r3["S3"] c31[" "] c32["P6"] c33[" "] c34["P5"] c35[" "]
+  r2["S2"] c21["P8  P10  P12"] c22["P7  P11"] c23["P9"] c24[" "] c25[" "]
+  r1["S1"] c11[" "] c12[" "] c13[" "] c14[" "] c15[" "]
+
+  classDef zone fill:#e8f5ec,stroke:#d8dde1,color:#1a1a19
+  classDef cell fill:#ffffff,stroke:#e6e4de,color:#5b6069
+  classDef axis fill:#ffffff,stroke:#ffffff,color:#8a8e96
+  class z51,z52,z41,z42 zone
+  class c53,c54,c55,c43,c44,c45,c31,c32,c33,c34,c35,c21,c22,c23,c24,c25,c11,c12,c13,c14,c15 cell
+  class h1,h2,h3,h4,h5,r1,r2,r3,r4,r5 axis
+
+```
+
 |        | E1 · <0.5 day      | E2                                                     | E3 · 1–3 days                                               | E4     | E5 · >5 days |
 | ------ | ------------------ | ------------------------------------------------------ | ----------------------------------------------------------- | ------ | ------------ |
-| **S5** | <mark style="color:$success;background-color:$success;">　</mark> | <mark style="color:$success;background-color:$success;">　</mark>                                                     | <mark style="background-color:$success;">**P1 · P3**</mark> |        |              |
-| **S4** | <mark style="color:$success;background-color:$success;">　</mark> | <mark style="background-color:$success;">**P2**</mark> | <mark style="background-color:$success;">**P13**</mark>     |        |              |
+| **S5** | 　                  | 　                                                      | <mark style="background-color:$success;">**P1 · P3**</mark> |        |              |
+| **S4** | 　                  | <mark style="background-color:$success;">**P2**</mark> | <mark style="background-color:$success;">**P13**</mark>     |        |              |
 | **S3** |                    |                                                        | **P6**                                                      |        | **P5**       |
 | **S2** | **P8 · P10 · P12** |                                                        | **P7 · P11**                                                | **P9** |              |
 | **S1** |                    |                                                        |                                                             |        |              |
@@ -103,26 +117,26 @@ _Read the grid as the opening argument, not the verdict._
 
 ## Pain register
 
-|                                              | Pain                                                                       |    RPN |
-| -------------------------------------------- | -------------------------------------------------------------------------- | -----: |
-| <mark style="color:$danger;background-color:$danger;">**P1**</mark>   | No way to correct a company's type                                         | **60** |
-| <mark style="color:$danger;background-color:$danger;">**P13**</mark>  | Corporate = catch-all; banks & advisories counted as clients · **PRD GAP** | **60** |
-| <mark style="color:orange;background-color:orange;">**P3**</mark>    | Refresh silently overwrites classification                                 |     50 |
-| <mark style="color:orange;background-color:orange;">**P5**</mark>    | 3+ competing type taxonomies                                               |     36 |
+|                                                                        | Pain                                                                       |    RPN |
+| ---------------------------------------------------------------------- | -------------------------------------------------------------------------- | -----: |
+| <mark style="color:$danger;background-color:$danger;">**P1**</mark>    | No way to correct a company's type                                         | **60** |
+| <mark style="color:$danger;background-color:$danger;">**P13**</mark>   | Corporate = catch-all; banks & advisories counted as clients · **PRD GAP** | **60** |
+| <mark style="color:orange;background-color:orange;">**P3**</mark>      | Refresh silently overwrites classification                                 |     50 |
+| <mark style="color:orange;background-color:orange;">**P5**</mark>      | 3+ competing type taxonomies                                               |     36 |
 | <mark style="color:$warning;background-color:$warning;">**P6**</mark>  | Bulk edits skip the audit trail                                            |     30 |
 | <mark style="color:$warning;background-color:$warning;">**P2**</mark>  | On-demand refresh disconnected                                             |     24 |
 | <mark style="color:$warning;background-color:$warning;">**P9**</mark>  | Label list has two sources of truth                                        |     16 |
 | <mark style="color:$warning;background-color:$warning;">**P10**</mark> | One-sided lifecycle validation                                             |     16 |
 | <mark style="color:$warning;background-color:$warning;">**P11**</mark> | Low-confidence classifications have no review queue                        |     16 |
-| <mark style="color:$info;background-color:$info;">**P7**</mark>     | Missing company shows an empty panel                                       |     12 |
-| <mark style="color:$info;background-color:$info;">**P8**</mark>     | Bad filter values dropped without error                                    |     10 |
-| <mark style="color:$info;background-color:$info;">**P12**</mark>    | Bulk "all matching" rejection offers no recovery guidance                  |      8 |
+| <mark style="color:$info;background-color:$info;">**P7**</mark>        | Missing company shows an empty panel                                       |     12 |
+| <mark style="color:$info;background-color:$info;">**P8**</mark>        | Bad filter values dropped without error                                    |     10 |
+| <mark style="color:$info;background-color:$info;">**P12**</mark>       | Bulk "all matching" rejection offers no recovery guidance                  |      8 |
 
 ## Open gates
 
-_Open gates only (G1 accepted in rev 4 · G2 retired · G3 withdrawn — untyped-at-birth accepted). REVERSIBLE defaults execute on silence; ONE-WAY gates wait for [§3](change-briefs.md)._
+_Open gates only (G1 accepted in rev 4 · G2 retired · G3 withdrawn — untyped-at-birth accepted). REVERSIBLE defaults execute on silence; ONE-WAY gates wait for_ [_§3_](change-briefs.md)_._
 
-| Gate                | Question                                                                                                                                                                                  | Auditor recommendation                                                                                                                                      |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Gate                                                                             | Question                                                                                                                                                                                  | Auditor recommendation                                                                                                                                                          |
+| -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **G5** <mark style="color:$success;background-color:$success;">REVERSIBLE</mark> | Adopt the five new service-firm types — Advisory Firm, Law Firm, Banks, Accounting Firm, Other — mapped from the provider's own industry data, leaving Corporate = possible clients only? | **Yes** — start with the draft mapping (gate G5, [§3](change-briefs.md)); the backfill is re-runnable, so an amended mapping re-applies cleanly. **Executes on silence (48h).** |
-| **G4** <mark style="color:$danger;background-color:$danger;">ONE-WAY</mark>    | Taxonomy end-state: which vocabulary is canonical for "company type"?                                                                                                                     | Promote the official type tag and retire the legacy text label — now gates quick-win card 3. **No silence default** — answer on the [§3](change-briefs.md) options.             |
+| **G4** <mark style="color:$danger;background-color:$danger;">ONE-WAY</mark>      | Taxonomy end-state: which vocabulary is canonical for "company type"?                                                                                                                     | Promote the official type tag and retire the legacy text label — now gates quick-win card 3. **No silence default** — answer on the [§3](change-briefs.md) options.             |
