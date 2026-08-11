@@ -84,18 +84,6 @@ _Rows = how bad it is when it happens (S5 worst) · columns = how expensive it i
 | **S2** | <mark style="color:$info;">**P8**</mark> · <mark style="color:$warning;">**P10**</mark> · <mark style="color:$info;">**P12**</mark> | <mark style="color:$info;">**P7**</mark> · <mark style="color:$warning;">**P11**</mark>                                                                                  | <mark style="color:$warning;">**P9**</mark> |                                           |              |
 | **S1** |                                                                                                                                     |                                                                                                                                                                          |                                             |                                           |              |
 
-**The green zone** is the top-left corner — hurts a lot, costs little. Anything landing there is quick-win territory by default, and four pains sit in it: **P1, P3, P2, P13**.
-
-**But the quick-win bundle is P13, P1, P5, P6 — not the green four.** Two moved out and two moved in, for reasons the grid cannot see:
-
-| Pain       | Movement                                                                  | Why                                                                                                                     |
-| ---------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| **P3, P2** | <mark style="background-color:$success;">green zone</mark> → out of scope | descoped by product on 2026-08-11 — a scoring grid does not outrank a product decision; both stay on the register below |
-| **P5**     | S3 / E4 → <mark style="color:orange;">quick win 3</mark>                  | the priciest fix still on the board, promoted because every other taxonomy fix waits behind it                          |
-| **P6**     | S3 / E2 → <mark style="color:$warning;">quick win 4</mark>                | audit gaps compound — cheap now, unrecoverable later                                                                    |
-
-_Read the grid as the opening argument, not the verdict._
-
 ## Pain register
 
 |                                                                        | Pain                                                                       |    RPN |
