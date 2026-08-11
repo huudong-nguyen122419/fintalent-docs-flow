@@ -74,15 +74,15 @@ _12 pain points found, counted per class. Untyped-at-birth (P4) accepted as inte
 
 ## Impact × effort
 
-_Rows = how bad it is when it happens (S5 worst) · columns = how expensive it is to fix (E1 cheapest)._
+_Rows = how bad it is when it happens (S5 worst) · columns = how expensive it is to fix (E1 cheapest). Text colour is the severity class; a green cell sits in the quick-win zone._
 
-|        | E1 · <0.5 day      | E2                                                     | E3 · 1–3 days                                               | E4     | E5 · >5 days |
-| ------ | ------------------ | ------------------------------------------------------ | ----------------------------------------------------------- | ------ | ------------ |
-| **S5** | 　                  | 　                                                      | <mark style="background-color:$success;">**P1 · P3**</mark> |        |              |
-| **S4** | 　                  | <mark style="background-color:$success;">**P2**</mark> | <mark style="background-color:$success;">**P13**</mark>     |        |              |
-| **S3** |                    |                                                        | **P6**                                                      |        | **P5**       |
-| **S2** | **P8 · P10 · P12** |                                                        | **P7 · P11**                                                | **P9** |              |
-| **S1** |                    |                                                        |                                                             |        |              |
+|        | E1 · <0.5 day | E2 | E3 · 1–3 days | E4 | E5 · >5 days |
+| ------ | ------------- | -- | ------------- | -- | ------------ |
+| **S5** | <mark style="background-color:$success;">　</mark> | <mark style="color:$danger;background-color:$success;">**P1**</mark> · <mark style="color:orange;background-color:$success;">**P3**</mark> | | | |
+| **S4** | <mark style="color:$warning;background-color:$success;">**P2**</mark> | <mark style="color:$danger;background-color:$success;">**P13**</mark> | | | |
+| **S3** | | <mark style="color:$warning;">**P6**</mark> | | <mark style="color:orange;">**P5**</mark> | |
+| **S2** | <mark style="color:$info;">**P8**</mark> · <mark style="color:$warning;">**P10**</mark> · <mark style="color:$info;">**P12**</mark> | <mark style="color:$info;">**P7**</mark> · <mark style="color:$warning;">**P11**</mark> | <mark style="color:$warning;">**P9**</mark> | | |
+| **S1** | | | | | |
 
 **The green zone** is the top-left corner — hurts a lot, costs little. Anything landing there is quick-win territory by default, and four pains sit in it: **P1, P3, P2, P13**.
 
@@ -91,8 +91,8 @@ _Rows = how bad it is when it happens (S5 worst) · columns = how expensive it i
 | Pain       | Movement                                                                  | Why                                                                                                                     |
 | ---------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | **P3, P2** | <mark style="background-color:$success;">green zone</mark> → out of scope | descoped by product on 2026-08-11 — a scoring grid does not outrank a product decision; both stay on the register below |
-| **P5**     | S3 / E5 → <mark style="color:orange;">quick win 3</mark>                  | the most expensive fix on the board, promoted because every other taxonomy fix waits behind it                          |
-| **P6**     | S3 / E3 → <mark style="color:$warning;">quick win 4</mark>                | audit gaps compound — cheap now, unrecoverable later                                                                    |
+| **P5**     | S3 / E4 → <mark style="color:orange;">quick win 3</mark>                  | the priciest fix still on the board, promoted because every other taxonomy fix waits behind it                          |
+| **P6**     | S3 / E2 → <mark style="color:$warning;">quick win 4</mark>                | audit gaps compound — cheap now, unrecoverable later                                                                    |
 
 _Read the grid as the opening argument, not the verdict._
 
