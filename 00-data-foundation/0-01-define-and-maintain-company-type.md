@@ -104,7 +104,7 @@ Include/exclude type filtering with live counts, fast results — the read side 
 
 ## Quick wins
 
-*What we do now — four fixes, ≈ 8–12 dev-days. Build instructions in §9.*
+*Four fixes, ≈ 8–12 dev-days. Build instructions in §9. The eight pains outside this bundle stay on the register below.*
 
 | | Fix | Worth |
 |---|---|---|
@@ -112,21 +112,6 @@ Include/exclude type filtering with live counts, fast results — the read side 
 | **2** 🔴 `BLOCKER` | **Make company type correctable.** No screen or control lets an admin fix a wrong type today. | trustworthy target lists and reports, for ~1–3 dev-days |
 | **3** 🟠 `CRITICAL` | **One canonical company type.** Promote the official tag (eight values after win 1); retire the legacy free-text label — gate G4. | cross-team reports finally agree, for ~3–5 dev-days |
 | **4** 🟡 `MAJOR` | **Audit bulk edits.** Bulk edits re-score but skip the record of who changed what. | every bulk action becomes traceable, for ~1–2 dev-days |
-
-## Backlog
-
-*What we are **not** doing yet — the other eight pains, ≈ 4–6 dev-days if all were taken. Nothing here is closed; each stays on the register until it is built or explicitly retired.*
-
-| | Pain | Why it waits |
-|---|---|---|
-| **P3** 🟠 | Refresh silently overwrites classification | **Descoped by product 2026-08-11.** High score, but out of scope this round — a manual fix can be re-overwritten by the next import until this lands. |
-| **P2** 🟡 | On-demand refresh disconnected | **Descoped by product 2026-08-11.** The button exists but does not reach the refresh path. |
-| **P9** 🟡 | Label list has two sources of truth | Waits on gate **G4** — no point reconciling label sources before the canonical vocabulary is chosen. |
-| **P10** 🟡 | One-sided lifecycle validation | Cheap (<0.5 day) but low blast radius; scheduled for pass 2. |
-| **P11** 🟡 | Low-confidence classifications have no review queue | Only meaningful once type is correctable (quick win 2) — a queue with no edit control is a list nobody can act on. |
-| **P7** 🔵 | Missing company shows an empty panel | Cosmetic; affects deleted or bad-id records only. |
-| **P8** 🔵 | Bad filter values dropped without error | Cosmetic; the filter still returns correct results for the values it accepts. |
-| **P12** 🔵 | Bulk "all matching" rejection offers no recovery guidance | Cosmetic; the operation fails safely, only the message is unhelpful. |
 
 ## Severity scoreboard
 
@@ -154,7 +139,7 @@ Include/exclude type filtering with live counts, fast results — the read side 
 
 | | Pain | Movement | Why |
 |---|---|---|---|
-| 🟩→📋 | **P3, P2** | green zone → backlog | descoped by product on 2026-08-11 — a scoring grid does not outrank a product decision |
+| 🟩→⬜ | **P3, P2** | green zone → out of scope | descoped by product on 2026-08-11 — a scoring grid does not outrank a product decision; both stay on the register below |
 | ⬜→⚡ | **P5** | S3 / E5 → quick win 3 | the most expensive fix on the board, promoted because every other taxonomy fix waits behind it |
 | ⬜→⚡ | **P6** | S3 / E3 → quick win 4 | audit gaps compound — cheap now, unrecoverable later |
 
