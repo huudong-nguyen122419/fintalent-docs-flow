@@ -8,21 +8,21 @@
 **Takeaway:** finding companies by type works, but **"Corporate" itself is mis-defined** — it sweeps in banks and advisories — and **nobody can fix a wrong type**; four quick wins (≈ 10 dev-days) close the gaps.
 {% endhint %}
 
-## The problem
+## <mark style="color:blue;">The problem</mark>
 
 Every company must be classified Sponsor / PortCo / Corporate — the tag that drives targeting, reporting and account ownership. Today it is set **only** by a data-provider import that computes Corporate as simply _"everything that is neither of the other two"_ — so banks, M\&A advisories and other firms we could never sell to are counted as prospects, and nobody can correct any of it by hand.
 
-## Where it stands today
+## <mark style="color:blue;">Where it stands today</mark>
 
 Finding and filtering companies by type works end-to-end, fast and correct. **Maintaining** the classification does not: there is no way to fix a wrong type and refreshes overwrite silently. Untyped-at-birth for product-created companies is accepted behaviour (2026-08-11).
 
 **Status: reads work; the Corporate bucket over-counts by definition; maintenance fails silently in two places.**
 
-## What this document delivers
+## <mark style="color:blue;">What this document delivers</mark>
 
 **Pass 1:** the decision strip, this summary, and the journey health map with the scenario list (confirmed — explicit go received). **Pass 2** (included below): backend + frontend change briefs ([§3](change-briefs.md)) with every change tagged decided-or-CTO, and four junior-ready fix cards ([§9](build-instructions.md)). **On demand:** ops playbook, full journeys, technical appendix (drafted in rev 3).
 
-## What it costs
+## <mark style="color:blue;">What it costs</mark>
 
 Roughly **15–18 dev-days total**: quick wins ≈ 8–12 dev-days (reclassify service firms into the five new types + backfill, make type correctable, consolidate the type vocabularies, audit bulk edits); the remaining ranked debt ≈ 4–6 dev-days. Refresh-protection and on-demand-refresh work (P2, P3) was removed from scope by product on 2026-08-11; both pains stay on the register.
 
@@ -86,26 +86,10 @@ _Rows = how bad it is when it happens (S5 worst) · columns = how expensive it i
 
 ## Pain register
 
-|                                                                        | Pain                                                                       |    RPN |
-| ---------------------------------------------------------------------- | -------------------------------------------------------------------------- | -----: |
-| <mark style="color:$danger;background-color:$danger;">**P1**</mark>    | No way to correct a company's type                                         | **60** |
-| <mark style="color:$danger;background-color:$danger;">**P13**</mark>   | Corporate = catch-all; banks & advisories counted as clients · **PRD GAP** | **60** |
-| <mark style="color:orange;background-color:orange;">**P3**</mark>      | Refresh silently overwrites classification                                 |     50 |
-| <mark style="color:orange;background-color:orange;">**P5**</mark>      | 3+ competing type taxonomies                                               |     36 |
-| <mark style="color:$warning;background-color:$warning;">**P6**</mark>  | Bulk edits skip the audit trail                                            |     30 |
-| <mark style="color:$warning;background-color:$warning;">**P2**</mark>  | On-demand refresh disconnected                                             |     24 |
-| <mark style="color:$warning;background-color:$warning;">**P9**</mark>  | Label list has two sources of truth                                        |     16 |
-| <mark style="color:$warning;background-color:$warning;">**P10**</mark> | One-sided lifecycle validation                                             |     16 |
-| <mark style="color:$warning;background-color:$warning;">**P11**</mark> | Low-confidence classifications have no review queue                        |     16 |
-| <mark style="color:$info;background-color:$info;">**P7**</mark>        | Missing company shows an empty panel                                       |     12 |
-| <mark style="color:$info;background-color:$info;">**P8**</mark>        | Bad filter values dropped without error                                    |     10 |
-| <mark style="color:$info;background-color:$info;">**P12**</mark>       | Bulk "all matching" rejection offers no recovery guidance                  |      8 |
+<table><thead><tr><th width="131"></th><th width="468">Pain</th><th align="right">RPN</th></tr></thead><tbody><tr><td><mark style="color:$danger;background-color:$danger;"><strong>P1</strong></mark></td><td>No way to correct a company's type</td><td align="right"><strong>60</strong></td></tr><tr><td><mark style="color:$danger;background-color:$danger;"><strong>P13</strong></mark></td><td>Corporate = catch-all; banks &#x26; advisories counted as clients · <mark style="color:red;"><strong>PRD GAP</strong></mark></td><td align="right"><strong>60</strong></td></tr><tr><td><mark style="color:orange;background-color:orange;"><strong>P3</strong></mark></td><td>Refresh silently overwrites classification</td><td align="right">50</td></tr><tr><td><mark style="color:orange;background-color:orange;"><strong>P5</strong></mark></td><td>3+ competing type taxonomies</td><td align="right">36</td></tr><tr><td><mark style="color:$warning;background-color:$warning;"><strong>P6</strong></mark></td><td>Bulk edits skip the audit trail</td><td align="right">30</td></tr><tr><td><mark style="color:$warning;background-color:$warning;"><strong>P2</strong></mark></td><td>On-demand refresh disconnected</td><td align="right">24</td></tr><tr><td><mark style="color:$warning;background-color:$warning;"><strong>P9</strong></mark></td><td>Label list has two sources of truth</td><td align="right">16</td></tr><tr><td><mark style="color:$warning;background-color:$warning;"><strong>P10</strong></mark></td><td>One-sided lifecycle validation</td><td align="right">16</td></tr><tr><td><mark style="color:$warning;background-color:$warning;"><strong>P11</strong></mark></td><td>Low-confidence classifications have no review queue</td><td align="right">16</td></tr><tr><td><mark style="color:$info;background-color:$info;"><strong>P7</strong></mark></td><td>Missing company shows an empty panel</td><td align="right">12</td></tr><tr><td><mark style="color:$info;background-color:$info;"><strong>P8</strong></mark></td><td>Bad filter values dropped without error</td><td align="right">10</td></tr><tr><td><mark style="color:$info;background-color:$info;"><strong>P12</strong></mark></td><td>Bulk "all matching" rejection offers no recovery guidance</td><td align="right">8</td></tr></tbody></table>
 
 ## Open gates
 
 _Open gates only (G1 accepted in rev 4 · G2 retired · G3 withdrawn — untyped-at-birth accepted). REVERSIBLE defaults execute on silence; ONE-WAY gates wait for_ [_§3_](change-briefs.md)_._
 
-| Gate                                                                             | Question                                                                                                                                                                                  | Auditor recommendation                                                                                                                                                          |
-| -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **G5** <mark style="color:$success;background-color:$success;">REVERSIBLE</mark> | Adopt the five new service-firm types — Advisory Firm, Law Firm, Banks, Accounting Firm, Other — mapped from the provider's own industry data, leaving Corporate = possible clients only? | **Yes** — start with the draft mapping (gate G5, [§3](change-briefs.md)); the backfill is re-runnable, so an amended mapping re-applies cleanly. **Executes on silence (48h).** |
-| **G4** <mark style="color:$danger;background-color:$danger;">ONE-WAY</mark>      | Taxonomy end-state: which vocabulary is canonical for "company type"?                                                                                                                     | Promote the official type tag and retire the legacy text label — now gates quick-win card 3. **No silence default** — answer on the [§3](change-briefs.md) options.             |
+<table><thead><tr><th width="170">Gate</th><th>Question</th><th>Auditor recommendation</th></tr></thead><tbody><tr><td><mark style="color:blue;"><strong>G5</strong></mark><br><mark style="color:$success;background-color:$success;">REVERSIBLE</mark></td><td>Adopt the five new service-firm types — Advisory Firm, Law Firm, Banks, Accounting Firm, Other — mapped from the provider's own industry data, leaving Corporate = possible clients only?</td><td><mark style="color:$success;"><strong>Yes</strong></mark> — start with the draft mapping (gate G5, <a href="change-briefs.md">§3</a>); the backfill is re-runnable, so an amended mapping re-applies cleanly. <mark style="color:red;"><strong>Executes on silence (48h)</strong></mark><strong>.</strong></td></tr><tr><td><mark style="color:blue;"><strong>G4</strong></mark><br><mark style="color:$danger;background-color:$danger;">ONE-WAY</mark></td><td>Taxonomy end-state: which vocabulary is canonical for "company type"?</td><td>Promote the official type tag and retire the legacy text label — now gates quick-win card 3. <strong>No silence default</strong> — answer on the <a href="change-briefs.md">§3</a> options.</td></tr></tbody></table>
