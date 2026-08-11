@@ -22,6 +22,8 @@
 
 _Steps 1→7 left to right as the journey runs. P13 is created by step 4's re-derivation but felt at step 1; P10 (one-sided validation of the lifecycle field) sits beside the flow on step 2's edit panel._
 
+![The seven steps as cards — status on the top edge, pain chips at the foot](journey-seven-steps.svg)
+
 ## Scenarios
 
 <mark style="color:$success;background-color:$success;">CONFIRMED</mark> _in rev 4; CPO may still trim before §5 expansion. One happy path + six variants the code can actually produce, worst first by provisional score._
