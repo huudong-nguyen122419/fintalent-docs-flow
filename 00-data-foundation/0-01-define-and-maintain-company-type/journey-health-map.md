@@ -8,85 +8,17 @@
 
 ## The seven steps
 
-```mermaid
-flowchart LR
-    A["1 · Find companies<br>by type"]
-    B["2 · Check one<br>company"]
-    C["3 · Fix a<br>wrong type"]
-    D["4 · Refresh from<br>the provider"]
-    E["5 · A new<br>company arrives"]
-    F["6 · Bulk<br>tidy-up"]
-    G["7 · Auto-classify<br>and report"]
-    A --> B --> C --> D --> E --> F --> G
-    classDef degraded fill:#fff5ec,stroke:#fe9a00,stroke-width:2px,color:#7a4a00
-    classDef fail fill:#fff2ef,stroke:#fb2c36,stroke-width:3px,color:#8a1118
-    classDef ok fill:#e9f9ef,stroke:#00c950,stroke-width:2px,color:#0a5c2a
-    class A,B,F,G degraded
-    class C,D fail
-    class E ok
-```
+| Step                            | What happens                                                                                                                       | Status                                                                       | Pains                                                                                                              |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| **1** Find companies by type    | Filtering is fast and exact — but the Corporate bucket itself over-includes: banks and advisories sit in the client list.          | <mark style="color:$warning;background-color:$warning;">DEGRADED</mark>      | <mark style="color:$danger;background-color:$danger;">P13</mark> · <mark style="background-color:$info;">P8</mark> |
+| **2** Check one company         | Open the panel; read type badges, parent and sponsor links.                                                                        | <mark style="color:$warning;background-color:$warning;">DEGRADED</mark>      | <mark style="background-color:$info;">P7</mark>                                                                    |
+| **3** Fix a wrong type          | While reviewing, the steward spots a mis-tagged firm — there is nowhere to correct it; the bad tag stays.                          | <mark style="color:$danger;background-color:$danger;">**SILENT-FAIL**</mark> | <mark style="color:$danger;background-color:$danger;">P1</mark>                                                    |
+| **4** Refresh from the provider | Scheduled refreshes rewrite every type value with no warning; the manual refresh button never made it onto the page.               | <mark style="color:$danger;background-color:$danger;">**SILENT-FAIL**</mark> | P3 · P2                                                                                                            |
+| **5** A new company arrives     | A sign-up creates a company with no type — accepted behaviour (2026-08-11); it gains a type on the next provider import.           | <mark style="color:$success;background-color:$success;">OK</mark>            | —                                                                                                                  |
+| **6** Bulk tidy-up              | Admins segment with buckets/labels instead; edits apply but leave no record of who changed what.                                   | <mark style="color:$warning;background-color:$warning;">DEGRADED</mark>      | P6 · P9 · P12                                                                                                      |
+| **7** Auto-classify & report    | The automated classifier tags companies, but low-confidence results hide in logs and four "type" vocabularies disagree in reports. | <mark style="color:$warning;background-color:$warning;">DEGRADED</mark>      | P5 · P11                                                                                                           |
 
-_Two of the seven fail without telling anyone — steps 3 and 4, outlined in red. Nothing on the path warns the person walking it._
-
-{% stepper %}
-{% step %}
-#### Find companies by type
-
-<mark style="color:$warning;background-color:$warning;">DEGRADED</mark> &nbsp; <mark style="color:$danger;background-color:$danger;">P13</mark> <mark style="background-color:$info;">P8</mark>
-
-Filtering is fast and exact — but the Corporate bucket itself over-includes: banks and advisories sit in the client list.
-{% endstep %}
-
-{% step %}
-#### Check one company
-
-<mark style="color:$warning;background-color:$warning;">DEGRADED</mark> &nbsp; <mark style="background-color:$info;">P7</mark>
-
-Open the panel; read type badges, parent and sponsor links.
-{% endstep %}
-
-{% step %}
-#### Fix a wrong type
-
-<mark style="color:$danger;background-color:$danger;">**SILENT-FAIL**</mark> &nbsp; <mark style="color:$danger;background-color:$danger;">P1</mark>
-
-While reviewing, the steward spots a mis-tagged firm — there is nowhere to correct it; the bad tag stays.
-{% endstep %}
-
-{% step %}
-#### Refresh from the provider
-
-<mark style="color:$danger;background-color:$danger;">**SILENT-FAIL**</mark> &nbsp; <mark style="color:orange;background-color:orange;">P3</mark> <mark style="color:$warning;background-color:$warning;">P2</mark>
-
-Scheduled refreshes rewrite every type value with no warning; the manual refresh button never made it onto the page.
-{% endstep %}
-
-{% step %}
-#### A new company arrives
-
-<mark style="color:$success;background-color:$success;">OK</mark>
-
-A sign-up creates a company with no type — accepted behaviour (2026-08-11); it gains a type on the next provider import.
-{% endstep %}
-
-{% step %}
-#### Bulk tidy-up
-
-<mark style="color:$warning;background-color:$warning;">DEGRADED</mark> &nbsp; <mark style="color:$warning;background-color:$warning;">P6</mark> <mark style="color:$warning;background-color:$warning;">P9</mark> <mark style="background-color:$info;">P12</mark>
-
-Admins segment with buckets/labels instead; edits apply but leave no record of who changed what.
-{% endstep %}
-
-{% step %}
-#### Auto-classify & report
-
-<mark style="color:$warning;background-color:$warning;">DEGRADED</mark> &nbsp; <mark style="color:orange;background-color:orange;">P5</mark> <mark style="color:$warning;background-color:$warning;">P11</mark>
-
-The automated classifier tags companies, but low-confidence results hide in logs and four "type" vocabularies disagree in reports.
-{% endstep %}
-{% endstepper %}
-
-_P13 is created by step 4's re-derivation but felt at step 1; P10 (one-sided validation of the lifecycle field) sits beside the flow on step 2's edit panel._
+_Steps 1→7 left to right as the journey runs. P13 is created by step 4's re-derivation but felt at step 1; P10 (one-sided validation of the lifecycle field) sits beside the flow on step 2's edit panel._
 
 ## Scenarios
 
