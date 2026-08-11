@@ -1,17 +1,17 @@
 # 0.04 · Refresh& Update, Identify and define contact roles and decision-maker taxonomy
 
-> **0. Data Foundation** &nbsp;·&nbsp; flow not written yet
+> **0. Data Foundation**  ·  flow not written yet
 
 Define the standardized functions, seniority levels and buying-process roles used to classify and prioritize contacts.
 
 ## Who does it
 
-| | SDR | KAM | Junior Ops | Senior Ops | Automation |
-|---|---|---|---|---|---|
-| **Short term** | R | · | · | S | · |
-| **Mid-term** | S | S | · | R | S |
+|                | SDR | KAM | Junior Ops | Senior Ops | Automation |
+| -------------- | --- | --- | ---------- | ---------- | ---------- |
+| **Short term** | R   | ·   | ·          | S          | ·          |
+| **Mid-term**   | S   | S   | ·          | R          | S          |
 
-`R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part
+`R` primary owner  ·  `S` supporting  ·  `·` no routine part
 
 ## Automation
 
@@ -19,8 +19,8 @@ Define the standardized functions, seniority levels and buying-process roles use
 
 ## Notes from the matrix
 
-- **Comment.** This defines contact types; selecting the actual person to approach remains part of Prospecting.
+* **Comment.** This defines contact types; selecting the actual person to approach remains part of Prospecting.
 
----
+***
 
-*Part of **Contact Data Management**, whose flows are not written yet. When they are, this page becomes the part dealing with refresh& Update, Identify and define contact roles and decision-maker taxonomy.*
+_Part of **Contact Data Management**, whose flows are not written yet. When they are, this page becomes the part dealing with refresh& Update, Identify and define contact roles and decision-maker taxonomy._

@@ -1,17 +1,17 @@
 # 9.03 · Manage client and talent communication cadence
 
-> **9. Project Delivery** &nbsp;·&nbsp; flow not written yet
+> **9. Project Delivery**  ·  flow not written yet
 
 Maintain proactive, professional communication and keep both sides aligned throughout delivery.
 
 ## Who does it
 
-| | SDR | KAM | Junior Ops | Senior Ops | Automation |
-|---|---|---|---|---|---|
-| **Short term** | · | · | S | R | · |
-| **Mid-term** | · | R | S | · | S |
+|                | SDR | KAM | Junior Ops | Senior Ops | Automation |
+| -------------- | --- | --- | ---------- | ---------- | ---------- |
+| **Short term** | ·   | ·   | S          | R          | ·          |
+| **Mid-term**   | ·   | R   | S          | ·          | S          |
 
-`R` primary owner &nbsp;·&nbsp; `S` supporting &nbsp;·&nbsp; `·` no routine part
+`R` primary owner  ·  `S` supporting  ·  `·` no routine part
 
 ## Automation
 
@@ -19,8 +19,8 @@ Maintain proactive, professional communication and keep both sides aligned throu
 
 ## Notes from the matrix
 
-- **Comment.** KAM is the voice of the client in the mid-term model.
+* **Comment.** KAM is the voice of the client in the mid-term model.
 
----
+***
 
-*This page is a placeholder for the flow. When it is written it will follow the same shape as the SDR guide: the critical path first, the branches under the step they belong to, and a line on what each step is for.*
+_This page is a placeholder for the flow. When it is written it will follow the same shape as the SDR guide: the critical path first, the branches under the step they belong to, and a line on what each step is for._
